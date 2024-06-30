@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "mission": "Наша миссия",
+    "howItWorks": "Как это работает",
+    "principles": "Принципы работы",
+    "mentors": "Менторы",
+    "founders": "Основатели",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "title": "Мы - эксперты из /n крупных компаний /n *(BigTech).*",
+    "body": "В рамках программы менторства мы можем помочь стартапам разобраться со сложными юридическими вопросами, помочь найти экономичное и эффективное решение юридического вопроса."
+  },
+  "howItWorks": {
+    "title": "Менторские сессии: как это работает",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "Шаг 1",
+        "body": {
+          "title": "Запрос",
+          "body": "Перед звонком с ментором-юристом вы формулируете запрос, связанный с юридической тематикой и бизнес-деятельностью стартапа. "
+        },
+        "color": "green.dark",
+        "textColor": "white"
+      },
+      {
+        "id": "step2",
+        "title": "Шаг 2",
+        "body": {
+          "title": "Анализ",
+          "body": "Организаторы, при необходимости, связываются с автором запроса уточнить детали запроса, цель и желаемый результат."
+        },
+        "color": "green.light",
+        "textColor": "green.dark"
+      },
+      {
+        "id": "step3",
+        "title": "Шаг 3",
+        "body": {
+          "title": "Встреча с ментором",
+          "body": "Организация менторской сессии."
+        },
+        "color": "green.light",
+        "textColor": "green.dark"
+      },
+      {
+        "id": "step4",
+        "title": "Шаг 4",
+        "body": {
+          "title": "Обратная связь",
+          "body": "Мы будем рады, если вы поделитесь с нами позже, смогли ли мы решить ваш вопрос, а также если поделитесь рекомендацией с другими стартапами."
+        },
+        "color": "green.dark",
+        "textColor": "white"
+      }
+    ],
+    "disclaimer": "Мы не можем помочь с техническими вопросами такими как подготовка документов, регистрация юридического лица, представление в судебных или иных органах и другие. В случае сомнений, свяжитесь с организаторами, чтобы уточнить релевантность вопроса. Менторские сессии организуются на безвозмездной основе."
+  },
+  "principles": {
+    "title": "Principles",
+    "items": [
+      {
+        "id": "principle1",
+        "title": "Love for technology",
+        "body": "We understand that Tech sphere is a rapidly developing and requires a creative approach and flexible thinking, and that’s why we love it!"
+      },
+      {
+        "id": "principle2",
+        "title": "Honesty",
+        "body": "We respect honesty, so we will always tell you if we can't help with a problem. We also appreciate your feedback."
+      },
+      {
+        "id": "principle3",
+        "title": "Respectful attitude towards work",
+        "body": "We appreciate the work and effort put in by both founders and managers of startups, as well as legal mentors."
+      },
+      {
+        "id": "principle4",
+        "title": "Love for the work we do",
+        "body": "We care about what we do."
+      },
+      {
+        "id": "principle5",
+        "title": "Respect for the founders",
+        "body": "We know that being a startup founder is not easy, so we want to help you find the strategically correct direction and minimize legal and financial risks."
+      }
+    ]
+  }
+}

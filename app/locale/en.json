@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "mission": "Our mission",
+    "howItWorks": "How it works",
+    "principles": "Principles",
+    "mentors": "Mentors",
+    "founders": "Founders",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "We are experts from /n large companies /n *(BigTech).*",
+    "body": "As part of the mentoring program, we can help startups deal with complex legal issues, help find a cost-effective and efficient solution to a legal issue."
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "Step 1",
+        "body": {
+          "title": "Request",
+          "body": "Before having a call with a mentor, you create a request related to legal topics and the business activities of the startup."
+        },
+        "color": "green.dark",
+        "textColor": "white"
+      },
+      {
+        "id": "step2",
+        "title": "Step 2",
+        "body": {
+          "title": "Analysis",
+          "body": "The executors, if necessary, will contact the author of the request to clarify the details of the request, purpose and desired result."
+        },
+        "color": "green.light",
+        "textColor": "green.dark"
+      },
+      {
+        "id": "step3",
+        "title": "Step 3",
+        "body": {
+          "title": "Meet with a mentor",
+          "body": "Setting up a mentoring session."
+        },
+        "color": "green.light",
+        "textColor": "green.dark"
+      },
+      {
+        "id": "step4",
+        "title": "Step 4",
+        "body": {
+          "title": "Feedback",
+          "body": "We will be happy if you could share with us later whether we were able to resolve your issue, and also if you share your recommendation with other startups"
+        },
+        "color": "green.dark",
+        "textColor": "white"
+      }
+    ],
+    "disclaimer": "We cannot help with technical issues such as preparation of documents, registration of a legal entity, representation in judicial or other authorities, and others. If in doubt, contact the organizers to clarify the relevance of the issue. Mentoring sessions are organized free of charge."
+  },
+  "principles": {
+    "title": "Principles",
+    "items": [
+      {
+        "id": "principle1",
+        "title": "Love for technology",
+        "body": "We understand that Tech sphere is a rapidly developing and requires a creative approach and flexible thinking, and that’s why we love it!"
+      },
+      {
+        "id": "principle2",
+        "title": "Honesty",
+        "body": "We respect honesty, so we will always tell you if we can't help with a problem. We also appreciate your feedback."
+      },
+      {
+        "id": "principle3",
+        "title": "Respectful attitude towards work",
+        "body": "We appreciate the work and effort put in by both founders and managers of startups, as well as legal mentors."
+      },
+      {
+        "id": "principle4",
+        "title": "Love for the work we do",
+        "body": "We care about what we do."
+      },
+      {
+        "id": "principle5",
+        "title": "Respect for the founders",
+        "body": "We know that being a startup founder is not easy, so we want to help you find the strategically correct direction and minimize legal and financial risks."
+      }
+    ]
+  }
+}
