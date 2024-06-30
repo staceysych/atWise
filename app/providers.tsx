@@ -34,13 +34,19 @@ const LocaleContext = createContext<ILocaleContext>(defaultContext);
 
 export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
+}: {
+  children: React.ReactNode;
 }) => {
-  const initialLang = (localStorage.getItem("lang") as Lang) || Lang.EN;
+  const initialLang =
+    (typeof window !== "undefined" && (localStorage.getItem("lang") as Lang)) ||
+    Lang.EN;
 
   const [lang, setLang] = useState(initialLang);
 
   useEffect(() => {
-    localStorage.setItem("lang", lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("lang", lang);
+    }
   }, [lang]);
 
   const setLanguage = (language: Lang) => {
