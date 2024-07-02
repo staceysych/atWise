@@ -16,7 +16,7 @@ import Image from "next/image";
 import { useLocale } from "@/app/providers";
 import { highlightText } from "@/app/utils/highlightText";
 
-export const HeroSection = () => {
+const HeroSection = () => {
   const { locale } = useLocale();
 
   const splitText = locale.hero.title.split("/n");
@@ -89,7 +89,13 @@ export const HeroSection = () => {
           </Button>
         </Stack>
 
-        <Box position="absolute" width="650px" right="16px" top="15%" zIndex={-1}>
+        <Box
+          position="absolute"
+          width="650px"
+          right="16px"
+          top="15%"
+          zIndex={-1}
+        >
           <Image
             src={HeroSectionIcon}
             alt="Hero icon"

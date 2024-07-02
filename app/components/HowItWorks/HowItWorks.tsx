@@ -14,7 +14,7 @@ import {
 import { useLocale } from "@/app/providers";
 import { Step } from "./components";
 
-export default function HowItWorks() {
+const HowItWorks = () => {
   const { locale } = useLocale();
 
   return (
@@ -102,4 +102,6 @@ export default function HowItWorks() {
       />
     </Box>
   );
-}
+};
+
+export default HowItWorks;

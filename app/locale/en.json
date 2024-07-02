@@ -86,5 +86,37 @@
         "body": "We know that being a startup founder is not easy, so we want to help you find the strategically correct direction and minimize legal and financial risks."
       }
     ]
+  },
+  "mentors": {
+    "title": "Our mentors",
+    "body": "Meet our mentors! Our mentors are industry leaders, successful entrepreneurs, and professionals who are passionate about sharing their knowledge and helping you succeed.",
+    "findOutMore": "Find out more",
+    "fieldOfExpertise": "Fields of expertise:",
+    "mentors": [
+      {
+        "id": "mentor1",
+        "name": "Tatiana Murzabaeva",
+        "position": "Head of Business Operations and Regulatory Affairs Legal Team",
+        "expertise": "E-commerce | Business Operations | Compliance | Consumer Protection",
+        "experience": "Tatiana leads the business operations and regulatory affairs legal team at Joom, ensuring compliance across all operational countries (with a primary focus on the EU and CIS regions). She provides comprehensive legal support for the marketplace, facilitates the launch of new business units, and champions the platform’s participation in initiatives like the EU Product Safety and Consumer Protection Pledges. Tatiana’s expertise includes e-commerce regulations, product safety, consumer protection compliance, and cross-border and domestic litigation. Her previous roles encompass managing legal support for international logistics IT solutions at Joom Logistics, overseeing legal matters for Eastern European operations at retailer Kingfisher, and serving as a dispute resolution associate at international legal firm Baker McKenzie. Tatiana excels in translating complex regulatory matters into actionable insights for business leaders, ensuring smooth and fast business growth while maintaining compliance and operational integrity.",
+        "education": "National Research University — Higher School of Economics"
+      },
+      {
+        "id": "mentor2",
+        "name": "Kamil Egelev",
+        "position": "Privacy Compliance Leader and Qualified Lawyer",
+        "expertise": "Privacy Law | Data Protection | IT law | Data Privacy | Privacy Compliance | Privacy Due Diligence",
+        "experience": "Kamil is a seasoned privacy compliance leader (IAPP CIPM, CIPP/E) and qualified lawyer. Have over 14 years of experience in the legal profession, both in law firms and as in-house counsel for a tech giant. Worked with fintech, e-commerce, advertising, ride-hailing, food-tech, transportation, ed tech, e-health businesses, consulting on IT/IP, privacy and data protection issues in multiple countries (EU, US, CIS). Supported companies during on-site audits of data protection authorities for good outcome. Excelled in simplifying privacy compliance.",
+        "education": "Russian New University"
+      },
+      {
+        "id": "mentor3",
+        "name": "Mariet Mezokh",
+        "position": "IP and Digital Products Legal Support Specialist",
+        "expertise": "IP Law | Commercial law | Acceleration programs | FinTech | Digital products development",
+        "experience": "Mariet is an expert specialising in IP and legal support of digital products. Her main projects include MTS StartUp Hub acceleration and partnerships program (2020-2024), UGC-platform NUUM (2023-2024) applications store (2022-2024).  Mariet has also acted as IP practice independent advisor at Infralex and as operations manager of a UK funded NGO. Her experience combines support of digital products for Retail companies (IKEA, Magnit) and Telecom industry (MTS). ",
+        "education": "Magister Juris, University of Oxford; Jurisprudence, Kuban State University. "
+      }
+    ]
   }
 }
