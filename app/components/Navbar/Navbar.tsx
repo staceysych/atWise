@@ -9,22 +9,20 @@ import {
   Stack,
   Collapse,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Container,
-  Divider,
-  transition,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import Image from "next/image";
 
-import { useScroll } from "../../hooks/useScroll";
+import Logo from "@/app/assets/logo.svg";
+import LogoWhite from "@/app/assets/logo2.svg";
 
-import { useLocale } from "../../providers";
+import { useScroll } from "@/app/hooks/useScroll";
+import { useLocale } from "@/app/providers";
 
 import { getNavItems } from "./utils/getNavItems";
 import { INavBarItem } from "./types";
-import { BiGame } from "react-icons/bi";
-import { useEffect, useState } from "react";
 
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -77,14 +75,15 @@ export const Navbar = () => {
           <Flex
             flex={{ base: 1 }}
             justify={{ base: "center", md: "space-between" }}
+            alignItems={"center"}
           >
-            <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              color={useColorModeValue("gray.800", "white")}
-            >
-              Logo
-            </Text>
+            <Box width={"150px"}>
+              <Image
+                src={isScrolled ? LogoWhite : Logo}
+                alt="AtWise Logo"
+                priority={true}
+              />
+            </Box>
 
             <Flex display={{ base: "none", md: "flex" }} ml={10}>
               <DesktopNav />

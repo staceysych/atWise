@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Flex,
   Heading,
   Modal,
@@ -16,6 +17,7 @@ import Image from "next/image";
 import { mapMentorToIcon } from "../utils/mapMentorToIcon";
 
 import { useLocale } from "@/app/providers";
+import { highlightText } from "@/app/utils/highlightText";
 
 interface DialogProps {
   isOpen: boolean;
@@ -32,32 +34,42 @@ const Dialog = ({ isOpen, onClose, mentor }: DialogProps) => {
       <ModalOverlay />
       <ModalContent minWidth={"800px"}>
         <ModalCloseButton />
-        <ModalBody>
-          <Stack py={4}>
+        <ModalBody padding={8}>
+          <Stack>
             <Flex width={"100%"} gap={8}>
-              <Box width={"200px"}>
-                {imgSrc && (
-                  <Image src={imgSrc} alt={mentor.name} priority={true} />
-                )}
-              </Box>
-
               <Stack width={"100%"} gap={2} color={"green.dark"}>
                 <Heading
                   fontWeight={600}
-                  fontSize={"4xl"}
+                  fontSize={"3xl"}
                   textAlign={"left"}
-                  marginBottom={4}
+                  marginBottom={2}
                 >
                   {mentor.name}
                 </Heading>
-
+                <Divider />
                 <Heading fontSize={"xl"}>
                   {locale.mentors.fieldOfExpertise}
                 </Heading>
                 <Text>{mentor.expertise}</Text>
-                <Text>{mentor.experience}</Text>
-                <Text>{mentor.education}</Text>
+                <Divider />
+                <Heading fontSize={"xl"}>{locale.mentors.experience}</Heading>
+                <Stack>
+                  {mentor.experience?.map((exp, index) => (
+                    <Text key={index}>
+                      {highlightText(exp, "orange.main", 600)}
+                    </Text>
+                  ))}
+                </Stack>
               </Stack>
+              <Box width={"200px"} color={"green.dark"}>
+                {imgSrc && (
+                  <Image src={imgSrc} alt={mentor.name} priority={true} />
+                )}
+                <Heading fontSize={"14px"} my={3}>
+                  {locale.mentors.education}
+                </Heading>
+                <Text fontSize={"12px"}>{mentor.education}</Text>
+              </Box>
             </Flex>
           </Stack>
         </ModalBody>

@@ -31,20 +31,19 @@ const Mentor = ({ mentor }: MentorProps) => {
       <Stack
         height={"340px"}
         width={"250px"}
-        border="15px solid"
+        border="16px solid"
         borderColor="white"
         shadow="md"
         borderRadius="8px"
         justifyContent={"flex-end"}
       >
         <Box width={"100%"} height={"110px"} bg={"white"} position={"relative"}>
-          <Box position={"absolute"} bottom={"110px"} right={"0"}>
+          <Box position={"absolute"} bottom={"110px"}>
             {imgSrc && (
               <Image
                 src={imgSrc}
                 alt={mentor.name}
                 priority={true}
-                height={300}
                 width={200}
               />
             )}
@@ -53,7 +52,7 @@ const Mentor = ({ mentor }: MentorProps) => {
             <Heading fontWeight={600} fontSize={"xl"} color={"green.dark"}>
               {mentor.name}
             </Heading>
-            <Text fontSize={12} color={"green.dark"}>
+            <Text fontSize={14} color={"green.dark"} height={"40px"}>
               {mentor.position}
             </Text>
             <Button
@@ -65,6 +64,7 @@ const Mentor = ({ mentor }: MentorProps) => {
               margin={"0 auto"}
               _hover={{ color: "orange.dark" }}
               onClick={onOpen}
+              borderBottom={"16px"}
             >
               {locale.mentors.findOutMore}
             </Button>

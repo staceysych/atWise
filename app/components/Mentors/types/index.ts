@@ -3,6 +3,6 @@ export type IMentor = {
   name: string;
   expertise: string;
   position: string;
-  experience?: string;
+  experience?: string[];
   education?: string;
 };

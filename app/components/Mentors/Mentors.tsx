@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 import { useLocale } from "@/app/providers";
 
@@ -31,11 +39,21 @@ const Mentors = () => {
             </Heading>
             <Text color={"white"}>{locale.mentors.body}</Text>
           </Stack>
-          <Flex gap={8} marginTop={8}>
+          <Flex gap={8} mt={14} mb={8}>
             {mentors.mentors.map((mentor, index) => (
               <Mentor key={index} mentor={mentor} />
             ))}
           </Flex>
+          <Button
+            width="fit-content"
+            padding={6}
+            colorScheme={"orange"}
+            bg={"orange.main"}
+            _hover={{ bg: "orange.dark" }}
+            marginLeft={10}
+          >
+            Contact Us
+          </Button>
         </Stack>
       </Container>
     </Box>
