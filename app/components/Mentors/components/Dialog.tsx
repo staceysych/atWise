@@ -56,7 +56,11 @@ const Dialog = ({ isOpen, onClose, mentor }: DialogProps) => {
                 <Stack>
                   {mentor.experience?.map((exp, index) => (
                     <Text key={index}>
-                      {highlightText(exp, "orange.main", 600)}
+                      {highlightText({
+                        text: exp,
+                        color: "orange.main",
+                        fontWeight: 600,
+                      })}
                     </Text>
                   ))}
                 </Stack>

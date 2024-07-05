@@ -39,7 +39,14 @@ const Mentors = () => {
             </Heading>
             <Text color={"white"}>{locale.mentors.body}</Text>
           </Stack>
-          <Flex gap={8} mt={14} mb={8}>
+          <Flex
+            gap={14}
+            mt={14}
+            mb={8}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            maxWidth={"900px"}
+          >
             {mentors.mentors.map((mentor, index) => (
               <Mentor key={index} mentor={mentor} />
             ))}
@@ -50,7 +57,6 @@ const Mentors = () => {
             colorScheme={"orange"}
             bg={"orange.main"}
             _hover={{ bg: "orange.dark" }}
-            marginLeft={10}
           >
             Contact Us
           </Button>

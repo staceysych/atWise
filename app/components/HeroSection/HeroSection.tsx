@@ -22,14 +22,14 @@ const HeroSection = () => {
   const splitText = locale.hero.title.split("/n");
 
   return (
-    <Container maxW={"7xl"} paddingTop={20}>
+    <Container maxW={"7xl"}>
       <Stack
         textAlign={"center"}
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 40, md: 40 }}
         direction={"row"}
-        id="mission"
+        id="about"
         position="relative"
       >
         <Stack width="50%" gap={8} align="left" position="relative">
@@ -39,8 +39,8 @@ const HeroSection = () => {
             height={200}
             bg="linear-gradient(140deg, rgba(250,141,98,0.9) 0%, rgba(255,255,255,1) 100%)"
             position="absolute"
-            top={-5}
-            left={0}
+            top={-20}
+            left={-70}
             zIndex={-1}
           />
           <Box
@@ -51,39 +51,40 @@ const HeroSection = () => {
             position="absolute"
             bottom={-70}
             zIndex={-1}
-            right={-100}
+            right={-160}
           />
           <Heading
             fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
+            fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
             lineHeight={"110%"}
             color={"green.dark"}
             textAlign={"left"}
-            marginLeft={10}
           >
             {splitText.map((text, index) => (
               <Text as={"p"} key={index}>
-                {highlightText(text, "orange.main")}
+                {highlightText({ text, color: "orange.main" })}
               </Text>
             ))}
           </Heading>
-          <Flex maxW={500} marginLeft={10}>
-            <Text
-              color={"green.dark"}
-              textAlign="left"
-              fontWeight={500}
-              fontSize={20}
-            >
-              {locale.hero.body}
+          <Stack maxW={500}>
+            <Text color={"green.dark"} textAlign="left" fontWeight={600}>
+              {locale.hero.body[0]}
             </Text>
-          </Flex>
+            <Text color={"green.dark"} textAlign="left">
+              {highlightText({
+                text: locale.hero.body[1],
+                color: "green.dark",
+                fontWeight: 600,
+                underline: true,
+              })}
+            </Text>
+          </Stack>
           <Button
             width="fit-content"
             padding={6}
             colorScheme={"orange"}
             bg={"orange.main"}
             _hover={{ bg: "orange.dark" }}
-            marginLeft={10}
           >
             Contact Us
           </Button>

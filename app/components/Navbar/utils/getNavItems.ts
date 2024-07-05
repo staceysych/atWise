@@ -2,7 +2,7 @@ export const getNavItems = (lang: any) => {
   return [
     {
       label: lang.nav.mission,
-      id: "mission",
+      id: "about",
     },
     {
       label: lang.nav.howItWorks,

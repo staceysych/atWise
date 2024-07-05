@@ -1,6 +1,6 @@
 {
   "nav": {
-    "mission": "Our mission",
+    "mission": "About",
     "howItWorks": "How it works",
     "principles": "Principles",
     "mentors": "Mentors",
@@ -9,7 +9,10 @@
   },
   "hero": {
     "title": "We are experts from /n large companies /n *(BigTech).*",
-    "body": "As part of the mentoring program, we can help startups deal with complex legal issues, help find a cost-effective and efficient solution to a legal issue."
+    "body": [
+      "We get together to share our experience, views and insights that can help tech startups to easier navigate the deep water of legal issues.",
+      "Being experts with extensive experience of advising tech companies on different legal matters occurring during companies lives, we understand how difficult it can be to *find an external counsel* for a project, *assess the risks* of your first claim, or *foresee how legal requirements can affect new product launch*, and we will be happy if our experience will help you to approach legal questions."
+    ]
   },
   "howItWorks": {
     "title": "How it works",
@@ -55,7 +58,7 @@
         "textColor": "white"
       }
     ],
-    "disclaimer": "We cannot help with technical issues such as preparation of documents, registration of a legal entity, representation in judicial or other authorities, and others. If in doubt, contact the organizers to clarify the relevance of the issue. Mentoring sessions are organized free of charge."
+    "disclaimer": "This is a pro bono mentorship project, we do not provide legal services such as advising on transactions, drafting documents or representing your company in a court. Before making any decision, you are always advised to get legal advice or consultation."
   },
   "principles": {
     "title": "Principles",

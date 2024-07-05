@@ -82,7 +82,7 @@ const HowItWorks = () => {
             _hover={{ bg: "orange.dark" }}
             marginBottom={4}
           >
-            Contact Us
+            Mentoring session request
           </Button>
           <Divider maxWidth="60%" />
           <Text fontSize={12} width="70%">
