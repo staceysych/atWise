@@ -13,6 +13,7 @@ import {
 
 import { useLocale } from "@/app/providers";
 import Step from "@/app/components/Step";
+import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 const HowItWorks = () => {
   const { locale } = useLocale();
@@ -81,6 +82,7 @@ const HowItWorks = () => {
             bg={"orange.main"}
             _hover={{ bg: "orange.dark" }}
             marginBottom={4}
+            onClick={(e) => scrollToTheElement(e, "contactUs")}
           >
             Mentoring session request
           </Button>

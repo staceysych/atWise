@@ -15,6 +15,7 @@ import HeroSectionIcon from "@/app/assets/HeroSectionIcon.svg";
 import Image from "next/image";
 import { useLocale } from "@/app/providers";
 import { highlightText } from "@/app/utils/highlightText";
+import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 const HeroSection = () => {
   const { locale } = useLocale();
@@ -85,6 +86,7 @@ const HeroSection = () => {
             colorScheme={"orange"}
             bg={"orange.main"}
             _hover={{ bg: "orange.dark" }}
+            onClick={(e) => scrollToTheElement(e, "contactUs")}
           >
             Contact Us
           </Button>

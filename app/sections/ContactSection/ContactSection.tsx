@@ -9,7 +9,7 @@ const ContactSection = () => {
   const { locale } = useLocale();
 
   return (
-    <Container maxW={"7xl"} py={{ base: 20, md: 20 }}>
+    <Container maxW={"7xl"} py={{ base: 20, md: 20 }} id="contactUs">
       <Stack>
         <Heading
           fontWeight={600}

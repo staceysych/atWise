@@ -13,6 +13,7 @@ import {
 import { useLocale } from "@/app/providers";
 
 import Mentor from "@/app/components/Mentor";
+import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 const Mentors = () => {
   const { locale } = useLocale();
@@ -57,6 +58,7 @@ const Mentors = () => {
             colorScheme={"orange"}
             bg={"orange.main"}
             _hover={{ bg: "orange.dark" }}
+            onClick={(e) => scrollToTheElement(e, "contactUs")}
           >
             Contact Us
           </Button>

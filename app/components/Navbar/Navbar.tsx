@@ -97,6 +97,7 @@ export const Navbar = () => {
               colorScheme={"orange"}
               bg={"orange.main"}
               _hover={{ bg: "orange.dark" }}
+              onClick={(e) => scrollToTheElement(e, "contactUs")}
             >
               Contact Us
             </Button>
