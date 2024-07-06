@@ -4,7 +4,6 @@
     "howItWorks": "How it works",
     "principles": "Principles",
     "mentors": "Mentors",
-    "founders": "Founders",
     "contact": "Contact"
   },
   "hero": {
@@ -22,7 +21,11 @@
         "title": "Step 1",
         "body": {
           "title": "Request",
-          "body": "Before having a call with a mentor, you create a request related to legal topics and the business activities of the startup."
+          "body": "You fill out our request form.",
+          "link": {
+            "title": "Mentoring section request form",
+            "url": "contactUs"
+          }
         },
         "color": "green.dark",
         "textColor": "white"
@@ -32,7 +35,7 @@
         "title": "Step 2",
         "body": {
           "title": "Analysis",
-          "body": "The executors, if necessary, will contact the author of the request to clarify the details of the request, purpose and desired result."
+          "body": "We contact you if necessary to clarify the details of your request."
         },
         "color": "green.light",
         "textColor": "green.dark"
@@ -42,7 +45,7 @@
         "title": "Step 3",
         "body": {
           "title": "Meet with a mentor",
-          "body": "Setting up a mentoring session."
+          "body": "You have a mentoring session. Each session lasts one hour. You can have up to 2 sessions per request."
         },
         "color": "green.light",
         "textColor": "green.dark"
@@ -52,7 +55,7 @@
         "title": "Step 4",
         "body": {
           "title": "Feedback",
-          "body": "We will be happy if you could share with us later whether we were able to resolve your issue, and also if you share your recommendation with other startups"
+          "body": "We collect your feedback."
         },
         "color": "green.dark",
         "textColor": "white"
@@ -161,5 +164,29 @@
         "education": "Queen Mary University of London, Higher School of Economics"
       }
     ]
+  },
+  "contactUs": {
+    "heading": "Get in touch",
+    "title": "Mentorship session request form.",
+    "name": {
+      "label": "Name",
+      "placeholder": "Provide your full name"
+    },
+    "contactInfo": {
+      "label": "Contact information",
+      "placeholder": "Email, LinkedIn, WhatsApp, or Telegram"
+    },
+    "about": {
+      "label": "Tell us about your startup",
+      "placeholder": "Describe what you do, your location, etc."
+    },
+    "goal": {
+      "label": "What do you want to discuss with a mentor?",
+      "placeholder": "Describe your challenges and the results you expect"
+    },
+    "preference": {
+      "label": "Preferred mentor",
+      "placeholder": "If you have a preference, please specify"
+    }
   }
 }

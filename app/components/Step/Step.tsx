@@ -1,9 +1,10 @@
 "use client";
 
-import { Box, Text, Heading, Stack, Flex } from "@chakra-ui/react";
+import { Text, Heading, Stack, Flex, Button } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { mapStepToIcon } from "@/app/components/HowItWorks/utils/mapStepToIcon";
+import { mapStepToIcon } from "./utils/mapStepToIcon";
+import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 interface StepProps {
   step: {
@@ -12,6 +13,7 @@ interface StepProps {
     body: {
       title: string;
       body: string;
+      link?: { title: string; url: string };
     };
     color: string;
     textColor: string;
@@ -38,6 +40,22 @@ const Step = ({ step }: StepProps) => {
       >
         <Heading fontSize={"xl"}>{body.title}</Heading>
         <Text>{body.body}</Text>
+        {body.link && (
+          <Button
+            variant={"text"}
+            padding={0}
+            onClick={(e) => scrollToTheElement(e, body.link?.url || "")}
+            color={"orange.main"}
+            transition={"all 0.3s ease-in-out"}
+            _hover={{
+              color: "orange.dark",
+              textDecoration: "underline",
+              textUnderlineOffset: "4px",
+            }}
+          >
+            {body.link.title}
+          </Button>
+        )}
       </Flex>
     </Stack>
   );

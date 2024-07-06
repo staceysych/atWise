@@ -17,10 +17,6 @@ export const getNavItems = (lang: any) => {
       id: "mentors",
     },
     {
-      label: lang.nav.founders,
-      id: "founders",
-    },
-    {
       label: lang.nav.contacts,
       id: "contacts",
     },

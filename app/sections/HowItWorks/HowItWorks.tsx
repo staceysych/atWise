@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useLocale } from "@/app/providers";
-import { Step } from "./components";
+import Step from "@/app/components/Step";
 
 const HowItWorks = () => {
   const { locale } = useLocale();

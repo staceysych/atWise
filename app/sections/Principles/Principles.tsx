@@ -2,7 +2,7 @@
 
 import { Container, Flex, Heading, Stack } from "@chakra-ui/react";
 
-import Principle from "./components/Principle";
+import Principle from "@/app/components/Principle";
 import { useLocale } from "@/app/providers";
 
 export const Principles = () => {

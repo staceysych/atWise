@@ -15,6 +15,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 
+import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import Logo from "@/app/assets/logo.svg";
 import LogoWhite from "@/app/assets/logo2.svg";
 
@@ -47,13 +48,7 @@ export const Navbar = () => {
       transition="all 0.3s ease-in-out"
     >
       <Container maxW={"7xl"}>
-        <Flex
-          bg={"inherit"}
-          minH={"60px"}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          align={"center"}
-        >
+        <Flex bg={"inherit"} minH={"60px"} py={{ base: 2 }} align={"center"}>
           <Flex
             flex={{ base: 1, md: "auto" }}
             ml={{ base: -2 }}
@@ -119,15 +114,6 @@ export const Navbar = () => {
 const DesktopNav = () => {
   const { locale } = useLocale();
 
-  const handleScrollToTheElement = (event: any, id: string) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
-
-    element?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   const underlineStyles = {
     textDecoration: "underline",
     textDecorationColor: "inherit",
@@ -137,13 +123,13 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={"row"} spacing={6}>
-      {getNavItems(locale).map((navItem) => (
+      {getNavItems(locale).map((navItem, index) => (
         <Box
-          key={navItem.label}
+          key={`${navItem.label}-${index}`}
           color={"inherit"}
           cursor={"pointer"}
           onClick={(e: React.MouseEvent<HTMLDivElement>) =>
-            handleScrollToTheElement(e, navItem.id)
+            scrollToTheElement(e, navItem.id)
           }
           _hover={{ ...underlineStyles }}
         >
@@ -159,11 +145,11 @@ const MobileNav = () => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
-      p={4}
+      py={4}
       display={{ md: "none" }}
     >
-      {getNavItems(locale).map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+      {getNavItems(locale).map((navItem, index) => (
+        <MobileNavItem key={`${navItem.label}-${index}`} {...navItem} />
       ))}
     </Stack>
   );

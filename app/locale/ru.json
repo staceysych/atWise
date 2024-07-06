@@ -157,5 +157,29 @@
         "education": "Queen Mary University of London, Higher School of Economics"
       }
     ]
+  },
+  "contactUs": {
+    "heading": "Get in touch",
+    "title": "Mentorship session request form.",
+    "name": {
+      "label": "Name",
+      "placeholder": "Provide your full name"
+    },
+    "contactInfo": {
+      "label": "Contact information",
+      "placeholder": "Email, LinkedIn, WhatsApp, or Telegram"
+    },
+    "about": {
+      "label": "Tell Us About Your Startup",
+      "placeholder": "Describe what you do, your location, etc."
+    },
+    "goal": {
+      "label": "What Do You Want to Discuss with a Mentor?",
+      "placeholder": "Describe your challenges and the results you expect"
+    },
+    "preference": {
+      "label": "Preferred Mentor",
+      "placeholder": "If you have a preference, please specify"
+    }
   }
 }

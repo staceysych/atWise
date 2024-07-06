@@ -10,11 +10,11 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { mapMentorToIcon } from "@/app/components/Mentors/utils/mapMentorToIcon";
+import { mapMentorToIcon } from "./utils/mapMentorToIcon";
 
 import { useLocale } from "@/app/providers";
-import { IMentor } from "../types";
-import Dialog from "./Dialog";
+import { IMentor } from "./types";
+import MentorDialog from "@/app/components/MentorDialog";
 
 interface MentorProps {
   mentor: IMentor;
@@ -71,7 +71,7 @@ const Mentor = ({ mentor }: MentorProps) => {
           </Stack>
         </Box>
       </Stack>
-      <Dialog isOpen={isOpen} onClose={onClose} mentor={mentor} />
+      <MentorDialog isOpen={isOpen} onClose={onClose} mentor={mentor} />
     </>
   );
 };

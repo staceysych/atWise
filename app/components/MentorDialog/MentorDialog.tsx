@@ -7,14 +7,13 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalOverlay,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { IMentor } from "../types";
+import { IMentor } from "../Mentor/types";
 import Image from "next/image";
-import { mapMentorToIcon } from "../utils/mapMentorToIcon";
+import { mapMentorToIcon } from "../Mentor/utils/mapMentorToIcon";
 
 import { useLocale } from "@/app/providers";
 import { highlightText } from "@/app/utils/highlightText";
@@ -25,7 +24,7 @@ interface DialogProps {
   mentor: IMentor;
 }
 
-const Dialog = ({ isOpen, onClose, mentor }: DialogProps) => {
+const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
   const imgSrc = mapMentorToIcon(mentor.id);
   const { locale } = useLocale();
 
@@ -82,4 +81,4 @@ const Dialog = ({ isOpen, onClose, mentor }: DialogProps) => {
   );
 };
 
-export default Dialog;
+export default MentorDialog;

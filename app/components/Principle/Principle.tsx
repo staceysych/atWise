@@ -1,6 +1,6 @@
 import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import { mapPrincipleToIcon } from "../utils/mapPrincipleToIcon";
+import { mapPrincipleToIcon } from "../../sections/Principles/utils/mapPrincipleToIcon";
 
 interface PrincipleProps {
   principle: { title: string; body: string; id: string };

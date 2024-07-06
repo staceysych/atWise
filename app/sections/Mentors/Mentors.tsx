@@ -12,7 +12,7 @@ import {
 
 import { useLocale } from "@/app/providers";
 
-import { Mentor } from "./components";
+import Mentor from "@/app/components/Mentor";
 
 const Mentors = () => {
   const { locale } = useLocale();
