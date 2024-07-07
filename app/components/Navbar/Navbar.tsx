@@ -80,7 +80,11 @@ export const Navbar = () => {
             justify={{ base: "center", md: "space-between" }}
             alignItems={"center"}
           >
-            <Box width={"150px"}>
+            <Box
+              width={"150px"}
+              onClick={(e) => scrollToTheElement(e, "about")}
+              cursor={"pointer"}
+            >
               <Image
                 src={enableScrollStyles ? LogoWhite : Logo}
                 alt="AtWise Logo"
