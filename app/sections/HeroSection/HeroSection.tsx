@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Flex,
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  Box,
-} from "@chakra-ui/react";
+import { Container, Heading, Stack, Text, Button, Box } from "@chakra-ui/react";
 
 import HeroSectionIcon from "@/app/assets/HeroSectionIcon.svg";
 
@@ -28,19 +20,24 @@ const HeroSection = () => {
         textAlign={"center"}
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 40, md: 40 }}
+        py={{ base: "120px", lg: 40 }}
         direction={"row"}
         id="about"
         position="relative"
       >
-        <Stack width="50%" gap={8} align="left" position="relative">
+        <Stack
+          width={{ base: "100%", lg: "50%" }}
+          gap={8}
+          align={{ base: "center", lg: "flex-start" }}
+          position="relative"
+        >
           <Box
             borderRadius="50%"
             width={200}
             height={200}
             bg="linear-gradient(140deg, rgba(250,141,98,0.9) 0%, rgba(255,255,255,1) 100%)"
             position="absolute"
-            top={-20}
+            top={{ base: -10, lg: -20 }}
             left={-70}
             zIndex={-1}
           />
@@ -52,14 +49,14 @@ const HeroSection = () => {
             position="absolute"
             bottom={-70}
             zIndex={-1}
-            right={-160}
+            right={{ base: -100, lg: -160 }}
           />
           <Heading
             fontWeight={600}
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
             lineHeight={"110%"}
             color={"green.dark"}
-            textAlign={"left"}
+            textAlign={{ base: "center", lg: "left" }}
           >
             {splitText.map((text, index) => (
               <Text as={"p"} key={index}>
@@ -67,11 +64,18 @@ const HeroSection = () => {
               </Text>
             ))}
           </Heading>
-          <Stack maxW={500}>
-            <Text color={"green.dark"} textAlign="left" fontWeight={600}>
+          <Stack maxW={{ base: 600, lg: 500 }}>
+            <Text
+              color={"green.dark"}
+              textAlign={{ base: "center", lg: "left" }}
+              fontWeight={600}
+            >
               {locale.hero.body[0]}
             </Text>
-            <Text color={"green.dark"} textAlign="left">
+            <Text
+              color={"green.dark"}
+              textAlign={{ base: "center", lg: "left" }}
+            >
               {highlightText({
                 text: locale.hero.body[1],
                 color: "green.dark",
@@ -94,10 +98,11 @@ const HeroSection = () => {
 
         <Box
           position="absolute"
-          width="650px"
+          width={{ base: "300px", lg: "550px", xl: "650px" }}
           right="16px"
           top="15%"
           zIndex={-1}
+          display={{ base: "none", lg: "block" }}
         >
           <Image
             src={HeroSectionIcon}

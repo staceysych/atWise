@@ -43,13 +43,13 @@ const HowItWorks = () => {
           </Heading>
 
           <Flex
-            maxWidth="60%"
             gap={8}
             align="center"
             flexWrap="wrap"
-            alignItems="stretch"
             marginBottom={6}
             position="relative"
+            maxWidth={"700px"}
+            justifyContent={"center"}
           >
             {locale.howItWorks.steps.map((step, index) => (
               <Step key={index} step={step} />

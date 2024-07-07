@@ -24,9 +24,15 @@ const Step = ({ step }: StepProps) => {
   const { id, title, body, color, textColor } = step;
 
   return (
-    <Stack flex="1 1 calc(50% - 16px)" borderRadius={14} bg={color} padding={6}>
+    <Stack
+      width={"290px"}
+      height={"270px"}
+      borderRadius={14}
+      bg={color}
+      padding={6}
+    >
       <Flex justifyContent="space-between" alignItems="center">
-        <Heading fontSize={"3xl"} color={textColor}>
+        <Heading fontSize={{ base: "2xl", md: "3xl" }} color={textColor}>
           {title}
         </Heading>
         <Image src={mapStepToIcon(id)} alt={title} />

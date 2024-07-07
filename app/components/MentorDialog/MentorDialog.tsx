@@ -31,9 +31,9 @@ const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent minWidth={"800px"}>
+      <ModalContent minWidth={{ base: "none", lg: "800px" }}>
         <ModalCloseButton />
-        <ModalBody padding={8}>
+        <ModalBody padding={{ base: 6, lg: 8 }}>
           <Stack>
             <Flex width={"100%"} gap={8}>
               <Stack width={"100%"} gap={2} color={"green.dark"}>
@@ -63,8 +63,19 @@ const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
                     </Text>
                   ))}
                 </Stack>
+                <Divider display={{ base: "block", lg: "none" }} />
+                <Box display={{ base: "block", lg: "none" }}>
+                  <Heading fontSize={"xl"} marginBottom={2}>
+                    {locale.mentors.education}
+                  </Heading>
+                  <Text>{mentor.education}</Text>
+                </Box>
               </Stack>
-              <Box width={"200px"} color={"green.dark"}>
+              <Box
+                width={"200px"}
+                color={"green.dark"}
+                display={{ base: "none", lg: "block" }}
+              >
                 {imgSrc && (
                   <Image src={imgSrc} alt={mentor.name} priority={true} />
                 )}

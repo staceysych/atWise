@@ -20,7 +20,7 @@ import { BsPerson } from "react-icons/bs";
 
 import emailjs from "@emailjs/browser";
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 import { useLocale } from "@/app/providers";
 import { useRef } from "react";
@@ -73,7 +73,7 @@ const ContactForm = () => {
     <Stack
       bg="orange.lighter"
       borderRadius="lg"
-      width={"50%"}
+      width={{ base: "100%", lg: "50%" }}
       padding={8}
       color={"green.dark"}
       alignItems={"center"}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Heading, Stack } from "@chakra-ui/react";
+import { Container, Heading, Stack, Box } from "@chakra-ui/react";
 
 import { useLocale } from "@/app/providers";
 import ContactForm from "@/app/components/ContactForm";
@@ -10,7 +10,7 @@ const ContactSection = () => {
 
   return (
     <Container maxW={"7xl"} py={{ base: 20, md: 20 }} id="contactUs">
-      <Stack>
+      <Stack align={"center"}>
         <Heading
           fontWeight={600}
           fontSize={{ base: "2xl", sm: "2xl", md: "4xl" }}

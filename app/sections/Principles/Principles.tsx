@@ -27,9 +27,9 @@ export const Principles = () => {
         </Heading>
         <Flex
           flexWrap="wrap"
-          justifyContent="space-evenly"
-          width="100%"
-          rowGap={8}
+          justifyContent="center"
+          maxWidth={{ base: "800px", xl: "100%" }}
+          gap={8}
         >
           {locale.principles.items.map((principle, index) => (
             <Principle key={index} principle={principle} />
