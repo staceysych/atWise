@@ -170,7 +170,7 @@ const ContactForm = () => {
                 />
               </InputGroup>
             </FormControl>
-            <FormControl id="name" float="right">
+            <FormControl id="name" display={"flex"} justifyContent={"center"}>
               <Button type="submit" bg="green.dark" color="white" _hover={{}}>
                 Send a request
               </Button>

@@ -51,19 +51,25 @@ const HeroSection = () => {
             zIndex={-1}
             right={{ base: -100, lg: -160 }}
           />
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
-            lineHeight={"110%"}
-            color={"green.dark"}
-            textAlign={{ base: "center", lg: "left" }}
-          >
-            {splitText.map((text, index) => (
-              <Text as={"p"} key={index}>
-                {highlightText({ text, color: "orange.main" })}
-              </Text>
-            ))}
-          </Heading>
+          <Stack alignItems={"flex-start"} gap={0}>
+            <Text color={"green.dark"} opacity={0.7}>
+              {locale.hero.section.toUpperCase()}
+            </Text>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+              lineHeight={"110%"}
+              color={"green.dark"}
+              textAlign={{ base: "center", lg: "left" }}
+            >
+              {splitText.map((text, index) => (
+                <Text as={"p"} key={index}>
+                  {highlightText({ text, color: "orange.main" })}
+                </Text>
+              ))}
+            </Heading>
+          </Stack>
+
           <Stack maxW={{ base: 600, lg: 500 }}>
             <Text
               color={"green.dark"}

@@ -6,10 +6,11 @@
     "mentors": "Mentors"
   },
   "hero": {
+    "section": "About the Project",
     "title": "We are experts from /n large companies /n *(BigTech).*",
     "body": [
       "We get together to share our experience, views and insights that can help tech startups to easier navigate the deep water of legal issues.",
-      "Being experts with extensive experience of advising tech companies on different legal matters occurring during companies lives, we understand how difficult it can be to *find an external counsel* for a project, *assess the risks* of your first claim, or *foresee how legal requirements can affect new product launch*, and we will be happy if our experience will help you to approach legal questions."
+      "We have extensive experience of advising tech companies on different legal matters occurring during companies lives, and we will be happy if our experience will help you to approach legal questions."
     ]
   },
   "howItWorks": {
@@ -20,9 +21,9 @@
         "title": "Step 1",
         "body": {
           "title": "Request",
-          "body": "You fill out our request form.",
+          "body": "You fill out our",
           "link": {
-            "title": "Mentoring section request form",
+            "title": "request form.",
             "url": "contactUs"
           }
         },
@@ -166,7 +167,7 @@
   },
   "contactUs": {
     "heading": "Get in touch",
-    "title": "Mentorship session request form.",
+    "title": "Mentorship session request form",
     "name": {
       "label": "Name",
       "placeholder": "Provide your full name"
@@ -187,5 +188,13 @@
       "label": "Preferred mentor",
       "placeholder": "If you have a preference, please specify"
     }
+  },
+  "footer": {
+    "links": [
+      {
+        "title": "Terms & Conditions"
+      }
+    ],
+    "rights": "© 2024 @Wise"
   }
 }

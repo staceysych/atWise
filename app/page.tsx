@@ -3,6 +3,7 @@ import HowItWorks from "./sections/HowItWorks";
 import Principles from "./sections/Principles";
 import Mentors from "./sections/Mentors";
 import ContactSection from "./sections/ContactSection";
+import Footer from "./components/Footer";
 
 import "./globals.css";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <Principles />
       <Mentors />
       <ContactSection />
+      <Footer />
     </main>
   );
 };

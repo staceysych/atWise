@@ -31,45 +31,46 @@ const Mentor = ({ mentor }: MentorProps) => {
       <Stack
         height={"340px"}
         width={"250px"}
-        border="16px solid"
-        borderColor="white"
-        shadow="md"
-        borderRadius="8px"
-        justifyContent={"flex-end"}
+        gap={0}
+        justifyContent={"stretch"}
       >
-        <Box width={"100%"} height={"110px"} bg={"white"} position={"relative"}>
-          <Box position={"absolute"} bottom={"110px"}>
-            {imgSrc && (
-              <Image
-                src={imgSrc}
-                alt={mentor.name}
-                priority={true}
-                width={200}
-              />
-            )}
-          </Box>
-          <Stack marginTop={3}>
-            <Heading fontWeight={600} fontSize={"xl"} color={"green.dark"}>
-              {mentor.name}
-            </Heading>
-            <Text fontSize={14} color={"green.dark"} height={"40px"}>
-              {mentor.position}
-            </Text>
-            <Button
-              variant={"text"}
-              height={"fit-content"}
-              width={"fit-content"}
-              color={"orange.main"}
-              padding={0}
-              margin={"0 auto"}
-              _hover={{ color: "orange.dark" }}
-              onClick={onOpen}
-              borderBottom={"16px"}
-            >
-              {locale.mentors.findOutMore}
-            </Button>
-          </Stack>
+        <Box
+          height={"100%"}
+          display={"flex"}
+          alignItems={"flex-end"}
+          justifyContent={"center"}
+        >
+          {imgSrc && (
+            <Image src={imgSrc} alt={mentor.name} priority={true} width={200} />
+          )}
         </Box>
+        <Stack
+          shadow="md"
+          background={"white"}
+          borderRadius={8}
+          width={"100%"}
+          padding={3}
+        >
+          <Heading fontWeight={600} fontSize={"xl"} color={"green.dark"}>
+            {mentor.name}
+          </Heading>
+          <Text fontSize={14} color={"green.dark"} height={"40px"}>
+            {mentor.position}
+          </Text>
+          <Button
+            variant={"text"}
+            height={"fit-content"}
+            width={"fit-content"}
+            color={"orange.main"}
+            padding={0}
+            margin={"0 auto"}
+            _hover={{ color: "orange.dark" }}
+            onClick={onOpen}
+            borderBottom={"16px"}
+          >
+            {locale.mentors.findOutMore}
+          </Button>
+        </Stack>
       </Stack>
       <MentorDialog isOpen={isOpen} onClose={onClose} mentor={mentor} />
     </>

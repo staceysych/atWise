@@ -30,6 +30,7 @@ const Step = ({ step }: StepProps) => {
       borderRadius={14}
       bg={color}
       padding={6}
+      gap={6}
     >
       <Flex justifyContent="space-between" alignItems="center">
         <Heading fontSize={{ base: "2xl", md: "3xl" }} color={textColor}>
@@ -37,17 +38,12 @@ const Step = ({ step }: StepProps) => {
         </Heading>
         <Image src={mapStepToIcon(id)} alt={title} />
       </Flex>
-      <Flex
-        color={textColor}
-        direction="column"
-        gap={3}
-        alignItems="flex-start"
-        textAlign="left"
-      >
-        <Heading fontSize={"xl"}>{body.title}</Heading>
+      <Flex color={textColor} gap={2} alignItems="centre" textAlign="left">
         <Text>{body.body}</Text>
         {body.link && (
           <Button
+            display={"flex"}
+            alignItems={"flex-start"}
             variant={"text"}
             padding={0}
             onClick={(e) => scrollToTheElement(e, body.link?.url || "")}
@@ -58,6 +54,7 @@ const Step = ({ step }: StepProps) => {
               textDecoration: "underline",
               textUnderlineOffset: "4px",
             }}
+            lineHeight={"24px"}
           >
             {body.link.title}
           </Button>
