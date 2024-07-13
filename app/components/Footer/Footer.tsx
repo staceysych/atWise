@@ -1,16 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { ReactNode } from "react";
+import { Box, Container, Divider, Flex, Text } from "@chakra-ui/react";
 
 import Image from "next/image";
 
@@ -19,7 +9,12 @@ import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import { useLocale } from "@/app/providers";
 
 const Footer = () => {
-  const { locale } = useLocale();
+  const {
+    locale: {
+      footer: { links, rights },
+    },
+  } = useLocale();
+
   return (
     <Box bg={"green.dark"} color={"white"}>
       <Container
@@ -50,7 +45,7 @@ const Footer = () => {
             <Image src={LogoWhite} alt="AtWise Logo Footer" priority={true} />
           </Box>
           <Flex direction={"row"} gap={4}>
-            {locale.footer.links.map((link, index) => (
+            {links.map((link, index) => (
               <Box key={index}>{link.title}</Box>
             ))}
           </Flex>
@@ -63,7 +58,7 @@ const Footer = () => {
           }}
           my={2}
         />
-        <Text>{locale.footer.rights}</Text>
+        <Text>{rights}</Text>
       </Container>
     </Box>
   );

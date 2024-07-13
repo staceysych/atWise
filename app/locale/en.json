@@ -68,41 +68,41 @@
     "items": [
       {
         "id": "principle1",
-        "title": "Love for technology",
-        "body": "We understand that Tech sphere is a rapidly developing and requires a creative approach and flexible thinking, and that’s why we love it!"
+        "title": "Love for technology and innovation",
+        "body": "We believe that technology is changing the world for the better and opens new horizons for the people’s development and growth, that’s why we love it and want to support companies driving positive changes through the technology-based solutions"
       },
       {
         "id": "principle2",
-        "title": "Honesty",
-        "body": "We respect honesty, so we will always tell you if we can't help with a problem. We also appreciate your feedback."
+        "title": "Honesty and open dialog",
+        "body": "We know that sometimes our expertise, background or other circumstances make it difficult or impossible for us to deal with certain matter. We will always tell you, if we cannot help. We also appreciate open feedback on our cooperation"
       },
       {
         "id": "principle3",
-        "title": "Respectful attitude towards work",
-        "body": "We appreciate the work and effort put in by both founders and managers of startups, as well as legal mentors."
+        "title": "Curiosity",
+        "body": "We are fascinated by learning new things, be it's an innovative technology, a new business model, or a new approach to regulation"
       },
       {
         "id": "principle4",
         "title": "Love for the work we do",
-        "body": "We care about what we do."
+        "body": "We are real fans of our work! It is important for us to grow and develop professionally, to invest in development of the highest professional standards and strive to be reliable business partners and role models for future generations of lawyers."
       },
       {
         "id": "principle5",
-        "title": "Respect for the founders",
-        "body": "We know that being a startup founder is not easy, so we want to help you find the strategically correct direction and minimize legal and financial risks."
+        "title": "Eagerness to share knowledge",
+        "body": "We want to create a common space where anyone can benefit from the knowledge and experience of others. We believe that such space can be a source of support and inspiration for both: those who share, and those who seek for advice"
       }
     ]
   },
   "mentors": {
     "title": "Our mentors",
-    "body": "Meet our mentors! Our mentors are industry leaders, successful entrepreneurs, and professionals who are passionate about sharing their knowledge and helping you succeed.",
+    "body": "Meet our mentors! Our mentors are industry leaders, seasoned legal practitioners, and professionals who are passionate about sharing their knowledge and helping you succeed.",
     "findOutMore": "Find out more",
     "fieldOfExpertise": "Fields of expertise:",
     "experience": "Experience:",
     "education": "Education:",
     "mentors": [
       {
-        "id": "mentor1",
+        "id": "1",
         "name": "Tatiana Murzabaeva",
         "position": "Commercial Compliance and Business Operations",
         "expertise": "E-commerce | Business Operations | Compliance | Consumer Protection",
@@ -115,7 +115,7 @@
         "education": "National Research University — Higher School of Economics"
       },
       {
-        "id": "mentor2",
+        "id": "2",
         "name": "Kamil Egelev",
         "position": "Privacy Compliance",
         "expertise": "Privacy Law | Data Protection | IT law | Data Privacy | Privacy Compliance | Privacy Due Diligence",
@@ -128,7 +128,7 @@
         "education": "Russian New University"
       },
       {
-        "id": "mentor3",
+        "id": "3",
         "name": "Mariet Mezokh",
         "position": "IP and Digital Products",
         "expertise": "IP Law | Commercial law | Acceleration programs | FinTech | Digital products development",
@@ -140,7 +140,7 @@
         "education": "Magister Juris, University of Oxford; Jurisprudence, Kuban State University. "
       },
       {
-        "id": "mentor4",
+        "id": "4",
         "name": "Lina Gevorgyan",
         "position": "IP and Content Protection",
         "expertise": "IP | Copyright | User & Content Safety | Dispute Resolution",
@@ -152,7 +152,7 @@
         "education": "Geneva University, Moscow State Law Academy (MSAL)."
       },
       {
-        "id": "mentor5",
+        "id": "5",
         "name": "Aleksandra Skiba",
         "position": "Legal Operations and Digital Transformation",
         "expertise": "Legal operations | Legal management | Contract management | Legal tech",
@@ -162,12 +162,25 @@
           "Previously, she held positions at *inDrive*, *Vivid Money*, *OZON.ru*, and others."
         ],
         "education": "Queen Mary University of London, Higher School of Economics"
+      },
+      {
+        "id": "6",
+        "name": "Ekaterina Kazmina",
+        "position": "Business Compliance and IT Regulation",
+        "expertise": "IT law | Antitrust | Compliance | Dispute resolution | M&A | Government Relations | ESG",
+        "experience": [
+          "Ekaterina Kazmina is leading a legal department for the non-profit arm of the international mobility and urban services platform *inDrive*. In this role Ekaterina develops and implements the division's legal strategy to ensure compliance with the applicable legislation, including laws regulating sports events, education, film festivals etc. Ekaterina provides legal support for online and offline projects in multiple regions, including *Central Asia, LATAM and Africa*.",
+          "Ekaterina’s most recent places of work also include *Yandex* where she worked for five years leading multiple legal projects in the spheres of antitrust, platform regulation, corporate and civil law, insider trading and compliance. Ekaterina also used to work as a *Senior Lecturer* at the Higher School of Economics teaching the master’s course Antitrust in Digital Economy.",
+          "Ekaterina has an extensive expertise in the IT sector, having supported such types of digital services as search engines, ride-hailing and streaming platforms, classifieds, marketplaces, and others."
+        ],
+        "education": "National Research University — Higher School of Economics"
       }
     ]
   },
   "contactUs": {
     "heading": "Get in touch",
     "title": "Mentorship session request form",
+    "actionButton": "Send a request",
     "name": {
       "label": "Name",
       "placeholder": "Provide your full name"
@@ -187,6 +200,16 @@
     "preference": {
       "label": "Preferred mentor",
       "placeholder": "If you have a preference, please specify"
+    },
+    "successMessage": {
+      "title": "Request Sent Successfully!",
+      "body": "We've received your request and will get back to you soon."
+    },
+    "validation": {
+      "requiredField": "This is required",
+      "fields": {
+        "name": "Please enter your full name"
+      }
     }
   },
   "footer": {
@@ -196,5 +219,9 @@
       }
     ],
     "rights": "© 2024 @Wise"
+  },
+  "contactButton": {
+    "title": "Contact Us",
+    "link": "contactUs"
   }
 }

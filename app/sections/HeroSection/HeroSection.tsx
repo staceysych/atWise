@@ -1,18 +1,20 @@
 "use client";
 
-import { Container, Heading, Stack, Text, Button, Box } from "@chakra-ui/react";
+import { Container, Heading, Stack, Text, Box } from "@chakra-ui/react";
 
 import HeroSectionIcon from "@/app/assets/HeroSectionIcon.svg";
 
 import Image from "next/image";
 import { useLocale } from "@/app/providers";
 import { highlightText } from "@/app/utils/highlightText";
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
+import ContactButton from "@/app/components/ContactButton";
 
 const HeroSection = () => {
-  const { locale } = useLocale();
+  const {
+    locale: { hero },
+  } = useLocale();
 
-  const splitText = locale.hero.title.split("/n");
+  const splitText = hero.title.split("/n");
 
   return (
     <Container maxW={"7xl"}>
@@ -51,9 +53,9 @@ const HeroSection = () => {
             zIndex={-1}
             right={{ base: -100, lg: -160 }}
           />
-          <Stack alignItems={"flex-start"} gap={0}>
+          <Stack alignItems={{ base: "center", lg: "flex-start" }} gap={0}>
             <Text color={"green.dark"} opacity={0.7}>
-              {locale.hero.section.toUpperCase()}
+              {hero.section.toUpperCase()}
             </Text>
             <Heading
               fontWeight={600}
@@ -76,30 +78,21 @@ const HeroSection = () => {
               textAlign={{ base: "center", lg: "left" }}
               fontWeight={600}
             >
-              {locale.hero.body[0]}
+              {hero.body[0]}
             </Text>
             <Text
               color={"green.dark"}
               textAlign={{ base: "center", lg: "left" }}
             >
               {highlightText({
-                text: locale.hero.body[1],
+                text: hero.body[1],
                 color: "green.dark",
                 fontWeight: 600,
                 underline: true,
               })}
             </Text>
           </Stack>
-          <Button
-            width="fit-content"
-            padding={6}
-            colorScheme={"orange"}
-            bg={"orange.main"}
-            _hover={{ bg: "orange.dark" }}
-            onClick={(e) => scrollToTheElement(e, "contactUs")}
-          >
-            Contact Us
-          </Button>
+          <ContactButton />
         </Stack>
 
         <Box

@@ -6,7 +6,11 @@ import Principle from "@/app/components/Principle";
 import { useLocale } from "@/app/providers";
 
 export const Principles = () => {
-  const { locale } = useLocale();
+  const {
+    locale: {
+      principles: { title, items },
+    },
+  } = useLocale();
 
   return (
     <Container maxW={"7xl"} id="principles">
@@ -23,15 +27,10 @@ export const Principles = () => {
           textAlign={"left"}
           marginBottom={8}
         >
-          {locale.principles.title.toUpperCase()}
+          {title.toUpperCase()}
         </Heading>
-        <Flex
-          flexWrap="wrap"
-          justifyContent="center"
-          maxWidth={{ base: "800px", xl: "100%" }}
-          gap={8}
-        >
-          {locale.principles.items.map((principle, index) => (
+        <Flex flexWrap="wrap" justifyContent={"center"} width={"100%"} gap={8}>
+          {items.map((principle, index) => (
             <Principle key={index} principle={principle} />
           ))}
         </Flex>

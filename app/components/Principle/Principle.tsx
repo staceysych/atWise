@@ -1,6 +1,6 @@
 import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import { mapPrincipleToIcon } from "../../sections/Principles/utils/mapPrincipleToIcon";
+import { mapPrincipleToIcon } from "./utils/mapPrincipleToIcon";
 
 interface PrincipleProps {
   principle: { title: string; body: string; id: string };
@@ -8,8 +8,9 @@ interface PrincipleProps {
 
 const Principle = (principle: PrincipleProps) => {
   const { title, body, id } = principle.principle;
+
   return (
-    <Stack alignItems="center" flex={1} maxWidth="200px" minWidth="190px">
+    <Stack alignItems="center" flex={1} maxWidth="300px" minWidth="210px">
       <Flex
         justifyContent="center"
         alignItems="center"

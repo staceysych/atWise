@@ -13,31 +13,20 @@ import {
   Stack,
   Heading,
   FormErrorMessage,
-  useToast,
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
-
-import emailjs from "@emailjs/browser";
 
 import { useForm } from "react-hook-form";
 
 import { useLocale } from "@/app/providers";
 import { useRef } from "react";
-import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/app/utils/defaults";
-
-interface IContactFormValues {
-  name: string;
-  contactInfo: string;
-  about: string;
-  goal: string;
-  preference: string;
-}
+import { IContactFormValues } from "./types";
+import { useSendEmail } from "./hooks";
 
 const ContactForm = () => {
   const { locale } = useLocale();
   const form = useRef<HTMLFormElement>(null);
-  const toast = useToast();
 
   const {
     handleSubmit,
@@ -46,28 +35,20 @@ const ContactForm = () => {
     reset,
   } = useForm<IContactFormValues>();
 
-  const sendEmail = () => {
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current || "", {
-        publicKey: PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          toast({
-            title: "Request Sent Successfully!",
-            description:
-              "We've received your request and will get back to you soon.",
-            status: "success",
-            duration: 9000,
-            isClosable: true,
-          });
-          reset();
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
+  const sendEmail = useSendEmail({ form, reset });
+
+  const {
+    contactUs: {
+      title,
+      name,
+      validation,
+      contactInfo,
+      about,
+      goal,
+      preference,
+      actionButton,
+    },
+  } = locale;
 
   return (
     <Stack
@@ -78,12 +59,12 @@ const ContactForm = () => {
       color={"green.dark"}
       alignItems={"center"}
     >
-      <Heading fontSize={"xl"}>{locale.contactUs.title}</Heading>
+      <Heading fontSize={"xl"}>{title}</Heading>
       <Box m={8} color="green.dark" width={"100%"}>
         <form onSubmit={handleSubmit(sendEmail)} ref={form}>
           <VStack spacing={5}>
             <FormControl isInvalid={!!errors.name} id="name">
-              <FormLabel>{locale.contactUs.name.label}</FormLabel>
+              <FormLabel>{name.label}</FormLabel>
               <InputGroup borderColor={!!errors.name ? "error" : "green.dark"}>
                 <InputLeftElement pointerEvents="none">
                   <BsPerson color="gray.800" />
@@ -94,12 +75,12 @@ const ContactForm = () => {
                   _hover={{
                     borderColor: "green.darker",
                   }}
-                  placeholder={locale.contactUs.name.placeholder}
+                  placeholder={name.placeholder}
                   {...register("name", {
-                    required: "This is required",
+                    required: validation.requiredField,
                     minLength: {
                       value: 4,
-                      message: "Please enter your full name",
+                      message: validation.fields.name,
                     },
                   })}
                 />
@@ -107,7 +88,7 @@ const ContactForm = () => {
               <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
             </FormControl>
             <FormControl isInvalid={!!errors.contactInfo} id="contactInfo">
-              <FormLabel>{locale.contactUs.contactInfo.label}</FormLabel>
+              <FormLabel>{contactInfo.label}</FormLabel>
               <InputGroup
                 borderColor={!!errors.contactInfo ? "error" : "green.dark"}
               >
@@ -120,44 +101,44 @@ const ContactForm = () => {
                   _hover={{
                     borderColor: "green.darker",
                   }}
-                  placeholder={locale.contactUs.contactInfo.placeholder}
+                  placeholder={contactInfo.placeholder}
                   {...register("contactInfo", {
-                    required: "This is required",
+                    required: validation.requiredField,
                   })}
                 />
               </InputGroup>
               <FormErrorMessage>{errors.about?.message}</FormErrorMessage>
             </FormControl>
             <FormControl isInvalid={!!errors.about} id="about">
-              <FormLabel>{locale.contactUs.about.label}</FormLabel>
+              <FormLabel>{about.label}</FormLabel>
               <Textarea
                 borderColor={!!errors.about ? "error" : "green.dark"}
                 _hover={{
                   borderColor: "green.darker",
                 }}
-                placeholder={locale.contactUs.about.placeholder}
+                placeholder={about.placeholder}
                 {...register("about", {
-                  required: "This is required",
+                  required: validation.requiredField,
                 })}
               />
               <FormErrorMessage>{errors.contactInfo?.message}</FormErrorMessage>
             </FormControl>
             <FormControl isInvalid={!!errors.goal} id="goal">
-              <FormLabel>{locale.contactUs.goal.label}</FormLabel>
+              <FormLabel>{goal.label}</FormLabel>
               <Textarea
                 borderColor={!!errors.goal ? "error" : "green.dark"}
                 _hover={{
                   borderColor: "green.darker",
                 }}
-                placeholder={locale.contactUs.goal.placeholder}
+                placeholder={goal.placeholder}
                 {...register("goal", {
-                  required: "This is required",
+                  required: validation.requiredField,
                 })}
               />
               <FormErrorMessage>{errors.goal?.message}</FormErrorMessage>
             </FormControl>
             <FormControl id="preference">
-              <FormLabel>{locale.contactUs.preference.label}</FormLabel>
+              <FormLabel>{preference.label}</FormLabel>
               <InputGroup borderColor={"green.dark"}>
                 <Input
                   type="text"
@@ -165,14 +146,14 @@ const ContactForm = () => {
                   _hover={{
                     borderColor: "green.darker",
                   }}
-                  placeholder={locale.contactUs.preference.placeholder}
+                  placeholder={preference.placeholder}
                   {...register("preference")}
                 />
               </InputGroup>
             </FormControl>
             <FormControl id="name" display={"flex"} justifyContent={"center"}>
               <Button type="submit" bg="green.dark" color="white" _hover={{}}>
-                Send a request
+                {actionButton}
               </Button>
             </FormControl>
           </VStack>

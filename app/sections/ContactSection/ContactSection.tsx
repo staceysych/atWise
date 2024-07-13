@@ -1,12 +1,16 @@
 "use client";
 
-import { Container, Heading, Stack, Box } from "@chakra-ui/react";
+import { Container, Heading, Stack } from "@chakra-ui/react";
 
 import { useLocale } from "@/app/providers";
 import ContactForm from "@/app/components/ContactForm";
 
 const ContactSection = () => {
-  const { locale } = useLocale();
+  const {
+    locale: {
+      contactUs: { heading },
+    },
+  } = useLocale();
 
   return (
     <Container maxW={"7xl"} py={{ base: 20, md: 20 }} id="contactUs">
@@ -19,7 +23,7 @@ const ContactSection = () => {
           margin={"0 auto"}
           mb={6}
         >
-          {locale.contactUs.heading.toUpperCase()}
+          {heading.toUpperCase()}
         </Heading>
         <ContactForm />
       </Stack>

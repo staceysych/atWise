@@ -16,7 +16,11 @@ import Step from "@/app/components/Step";
 import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 const HowItWorks = () => {
-  const { locale } = useLocale();
+  const {
+    locale: {
+      howItWorks: { title, steps, disclaimer },
+    },
+  } = useLocale();
 
   return (
     <Box
@@ -39,7 +43,7 @@ const HowItWorks = () => {
             textAlign={"left"}
             marginBottom={8}
           >
-            {locale.howItWorks.title.toUpperCase()}
+            {title.toUpperCase()}
           </Heading>
 
           <Flex
@@ -51,7 +55,7 @@ const HowItWorks = () => {
             maxWidth={"700px"}
             justifyContent={"center"}
           >
-            {locale.howItWorks.steps.map((step, index) => (
+            {steps.map((step, index) => (
               <Step key={index} step={step} />
             ))}
             <Box
@@ -88,7 +92,7 @@ const HowItWorks = () => {
           </Button>
           <Divider maxWidth="60%" />
           <Text fontSize={12} width="70%">
-            {locale.howItWorks.disclaimer}
+            {disclaimer}
           </Text>
         </Stack>
       </Container>
