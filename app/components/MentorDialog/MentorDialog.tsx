@@ -29,7 +29,7 @@ const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
   const { locale } = useLocale();
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent minWidth={{ base: "none", lg: "800px" }}>
         <ModalCloseButton />

@@ -5,7 +5,7 @@ import { Box, Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { useLocale } from "@/app/providers";
 
 import Mentor from "@/app/components/Mentor";
-import ContactButton from "@/app/components/ContactButton";
+import IncognitoMentor from "@/app/components/IncognitoMentor";
 
 const Mentors = () => {
   const {
@@ -43,8 +43,8 @@ const Mentors = () => {
             {mentors.mentors.map((mentor, index) => (
               <Mentor key={index} mentor={mentor} />
             ))}
+            <IncognitoMentor />
           </Flex>
-          <ContactButton />
         </Stack>
       </Container>
     </Box>

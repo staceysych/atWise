@@ -69,17 +69,17 @@
       {
         "id": "principle1",
         "title": "Love for technology and innovation",
-        "body": "We believe that technology is changing the world for the better and opens new horizons for the people’s development and growth, that’s why we love it and want to support companies driving positive changes through the technology-based solutions"
+        "body": "We believe that technology is changing the world for the better and opens new horizons for the people’s development and growth, that’s why we love it and want to support companies driving positive changes through the technology-based solutions."
       },
       {
         "id": "principle2",
         "title": "Honesty and open dialog",
-        "body": "We know that sometimes our expertise, background or other circumstances make it difficult or impossible for us to deal with certain matter. We will always tell you, if we cannot help. We also appreciate open feedback on our cooperation"
+        "body": "We know that sometimes our expertise, background or other circumstances make it difficult or impossible for us to deal with certain matter. We will always tell you, if we cannot help. We also appreciate open feedback on our cooperation."
       },
       {
         "id": "principle3",
         "title": "Curiosity",
-        "body": "We are fascinated by learning new things, be it's an innovative technology, a new business model, or a new approach to regulation"
+        "body": "We are fascinated by learning new things, be it's an innovative technology, a new business model, or a new approach to regulation."
       },
       {
         "id": "principle4",
@@ -89,7 +89,7 @@
       {
         "id": "principle5",
         "title": "Eagerness to share knowledge",
-        "body": "We want to create a common space where anyone can benefit from the knowledge and experience of others. We believe that such space can be a source of support and inspiration for both: those who share, and those who seek for advice"
+        "body": "We want to create a common space where anyone can benefit from the knowledge and experience of others. We believe that such space can be a source of support and inspiration for both: those who share, and those who seek for advice."
       }
     ]
   },
@@ -137,7 +137,7 @@
           "Her main projects include *MTS StartUp Hub acceleration and partnerships program* (2020-2024), *UGC-platform NUUM* (2023-2024) applications store (2022-2024). Mariet has also acted as IP practice independent advisor at *Infralex* and as operations manager of a UK funded *NGO*.",
           "Her experience combines support of digital products for Retail companies *(IKEA, Magnit)* and *Telecom industry (MTS)*."
         ],
-        "education": "Magister Juris, University of Oxford; Jurisprudence, Kuban State University. "
+        "education": "University of Oxford, Kuban State University"
       },
       {
         "id": "4",
@@ -149,7 +149,7 @@
           "She is skilled in content protection, user safety, IP and dispute resolution. She worked for *Yandex*, *TikTok*, *UGC-platform NUUM*. Lina has also established legal department for *WebKontrol Ltd*. from the ground up and implemented there functional and management processes.",
           "Her experience combines proactive risk assessment and mitigation with extensive court practice."
         ],
-        "education": "Geneva University, Moscow State Law Academy (MSAL)."
+        "education": "Geneva University, Moscow State Law Academy (MSAL)"
       },
       {
         "id": "5",
@@ -161,7 +161,7 @@
           "With *over 10 years of experience*, she focuses on  building and enhancing back-office processes.",
           "Previously, she held positions at *inDrive*, *Vivid Money*, *OZON.ru*, and others."
         ],
-        "education": "Queen Mary University of London, Higher School of Economics"
+        "education": "Queen Mary University of London, National Research University — Higher School of Economics"
       },
       {
         "id": "6",
@@ -169,13 +169,47 @@
         "position": "Business Compliance and IT Regulation",
         "expertise": "IT law | Antitrust | Compliance | Dispute resolution | M&A | Government Relations | ESG",
         "experience": [
-          "Ekaterina Kazmina is leading a legal department for the non-profit arm of the international mobility and urban services platform inDrive. In this role Ekaterina develops and implements the division's legal strategy to ensure compliance with the applicable legislation, including laws regulating sports events, education, film festivals etc. Ekaterina provides legal support for online and offline projects in multiple regions, including Central Asia, LATAM and Africa.",
-          "Ekaterina’s most recent places of work also include Yandex where she worked for five years leading multiple legal projects in the spheres of antitrust, platform regulation, corporate and civil law, insider trading and compliance. Ekaterina also used to work as a Senior Lecturer at the Higher School of Economics teaching the master’s course Antitrust in Digital Economy.",
+          "Ekaterina Kazmina is leading a legal department for the non-profit arm of the international mobility and urban services platform *inDrive*. In this role Ekaterina develops and implements the division's legal strategy to ensure compliance with the applicable legislation, including laws regulating sports events, education, film festivals etc. Ekaterina provides legal support for online and offline projects in multiple regions, including *Central Asia, LATAM and Africa*.",
+          "Ekaterina’s most recent places of work also include *Yandex* where she worked for five years leading multiple legal projects in the spheres of antitrust, platform regulation, corporate and civil law, insider trading and compliance. Ekaterina also used to work as a *Senior Lecturer* at the Higher School of Economics teaching the master’s course Antitrust in Digital Economy.",
           "Ekaterina has an extensive expertise in the IT sector, having supported such types of digital services as search engines, ride-hailing and streaming platforms, classifieds, marketplaces, and others."
         ],
         "education": "National Research University — Higher School of Economics"
+      },
+      {
+        "id": "7",
+        "name": "Natasha Orlova",
+        "position": "AI, IP law, contract law and data protection",
+        "expertise": "AI | IP | Contract law | Data protection",
+        "experience": [
+          "Natasha is an expert with *10+ years* of international legal experience in information technology, IP and contract law.",
+          "She worked for *Yandex, Philips and Booking.com*. She also supported a tech start-up *PortXchange* (a subsidiary of the Port of Rotterdam) as a sole legal counsel where she deployed privacy policies and practices and established legal processes.",
+          "Her experience combines the knowledge of the legal and business practices in *the Netherlands and Russia*."
+        ],
+        "education": "Tilburg University, Financial University under the Government of the Russian Federation"
+      },
+      {
+        "id": "8",
+        "name": "Elena Mazetova",
+        "position": "Global regulatory compliance and corporate governance",
+        "expertise": "IT law | Compliance | M&A and corporate governance | Global regulatory policy | Dispute Resolution",
+        "experience": [
+          "Elena is highly experienced legal practitioner with a diverse professional background in large IT companies and law firms with key focus on dispute resolution, M&A/corporate law, compliance and international/cross-border regulation. She is also advising companies on full scope legal support of IT business, including launches in foreign regions in part related to evaluation of legal risks, development of contractual structures, conducting negotiations, etc.",
+          "She held the position of *Vice President of Legal at inDrive* (global international mobility and urban services platform), and also worked at *Ozon* (one of the leading e-commerce platforms in Russia) and *Yandex* (biggest Russian IT company operating most popular search engine), where she participated in various landmark cases and high-profile transactions.",
+          "Elena is also lecturing at the National Research University Higher School of Economics and act as a mentor of the startup mentorship programs held by the *Aurora Tech Award* (worldwide prize for women tech founders) and *Underdog Tech Award* (An international prize for the best tech startups outside big tech hubs and communities)"
+        ],
+        "education": "Saïd Business School University of Oxford; Queen Mary University of London; National Research University - Higher School of Economics"
       }
-    ]
+    ],
+    "incognito": {
+      "name": "Your name is here...",
+      "subtitle": "Do you want to become a mentor?",
+      "dialog": {
+        "title": "Join as a mentor",
+        "body": "To become a mentor in our project, you will need at lease one reference from our current mentors, as well as confirmation of relevant experience.",
+        "contact": "For more details please contact us: ",
+        "email": "atwisementors@gmail.com"
+      }
+    }
   },
   "contactUs": {
     "heading": "Get in touch",

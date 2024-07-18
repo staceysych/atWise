@@ -54,21 +54,14 @@ const HeroSection = () => {
             right={{ base: -100, lg: -160 }}
           />
           <Stack alignItems={{ base: "center", lg: "flex-start" }} gap={0}>
-            <Text color={"green.dark"} opacity={0.7}>
-              {hero.section.toUpperCase()}
-            </Text>
             <Heading
               fontWeight={600}
-              fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+              fontSize={{ base: "xl", sm: "2xl", md: "3xl" }}
               lineHeight={"110%"}
               color={"green.dark"}
               textAlign={{ base: "center", lg: "left" }}
             >
-              {splitText.map((text, index) => (
-                <Text as={"p"} key={index}>
-                  {highlightText({ text, color: "orange.main" })}
-                </Text>
-              ))}
+              <Text color={"green.dark"}>{hero.section.toUpperCase()}</Text>
             </Heading>
           </Stack>
 

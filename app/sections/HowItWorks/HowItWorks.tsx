@@ -2,7 +2,6 @@
 
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
@@ -13,7 +12,6 @@ import {
 
 import { useLocale } from "@/app/providers";
 import Step from "@/app/components/Step";
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
 
 const HowItWorks = () => {
   const {
@@ -79,17 +77,6 @@ const HowItWorks = () => {
               left={-20}
             />
           </Flex>
-          <Button
-            width="fit-content"
-            padding={6}
-            colorScheme={"orange"}
-            bg={"orange.main"}
-            _hover={{ bg: "orange.dark" }}
-            marginBottom={4}
-            onClick={(e) => scrollToTheElement(e, "contactUs")}
-          >
-            Mentoring session request
-          </Button>
           <Divider maxWidth="60%" />
           <Text fontSize={12} width="70%">
             {disclaimer}
