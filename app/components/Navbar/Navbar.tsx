@@ -8,6 +8,7 @@ import {
   useDisclosure,
   Container,
   useMediaQuery,
+  useOutsideClick,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -19,11 +20,13 @@ import Logo from "@/app/assets/logo.svg";
 import LogoWhite from "@/app/assets/logo2.svg";
 
 import { useScroll } from "@/app/hooks/useScroll";
+import { useRef } from "react";
 
 export const Navbar = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
   const { isScrolled } = useScroll();
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+  const navRef = useRef(null);
 
   const enableScrollStyles = isScrolled && !isSmallScreen;
 
@@ -37,6 +40,11 @@ export const Navbar = () => {
     color: "green.dark",
   };
 
+  useOutsideClick({
+    ref: navRef,
+    handler: () => onClose(),
+  });
+
   return (
     <Box
       {...(enableScrollStyles ? scrollStyles : defaultStyles)}
@@ -44,6 +52,7 @@ export const Navbar = () => {
       zIndex={9}
       position="fixed"
       transition="all 0.3s ease-in-out"
+      ref={navRef}
     >
       <Container
         maxW={"7xl"}
