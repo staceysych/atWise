@@ -219,7 +219,7 @@
       "subtitle": "Do you want to become a mentor?",
       "dialog": {
         "title": "Join as a mentor",
-        "body": "To become a mentor in our project, you will need at lease one reference from our current mentors, as well as confirmation of relevant experience.",
+        "body": "To become a mentor in our project, you will need at least one reference from our current mentors, as well as confirmation of relevant experience.",
         "contact": "For more details please contact us: ",
         "email": "atwisementors@gmail.com"
       }
@@ -269,7 +269,7 @@
     "rights": "© 2024 @Wise",
     "joinAsMentor": {
       "title": "Join as a mentor: ",
-      "body": "To become a mentor in our project, you will need at lease one reference from our current mentors, as well as confirmation of relevant experience. For more details please contact us: <email>atwisementors@gmail.com<email>."
+      "body": "To become a mentor in our project, you will need at least one reference from our current mentors, as well as confirmation of relevant experience. For more details please contact us: <email>atwisementors@gmail.com<email>."
     }
   },
   "contactButton": {
