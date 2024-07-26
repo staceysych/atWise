@@ -6,14 +6,16 @@ import ContactSection from "./sections/ContactSection";
 import Footer from "./components/Footer";
 
 import "./globals.css";
+import { Divider } from "@chakra-ui/react";
 
 const Home = () => {
   return (
     <main>
       <HeroSection />
       <HowItWorks />
-      <Principles />
       <Mentors />
+      <Principles />
+      <Divider />
       <ContactSection />
       <Footer />
     </main>

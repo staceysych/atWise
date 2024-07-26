@@ -9,12 +9,12 @@ export const getNavItems = (lang: any) => {
       id: "howItWorks",
     },
     {
-      label: lang.nav.principles,
-      id: "principles",
-    },
-    {
       label: lang.nav.mentors,
       id: "mentors",
+    },
+    {
+      label: lang.nav.principles,
+      id: "principles",
     },
   ];
 };
