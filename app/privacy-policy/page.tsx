@@ -1,7 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const PrivacyPolicyContent = dynamic(() => import("./privacy-policy.mdx"));
+// const PrivacyPolicyContent = dynamic(() => import("./privacy-policy.mdx"));
 
 const PrivacyPolicyPage = () => {
   return (
@@ -37,7 +37,7 @@ const PrivacyPolicyPage = () => {
         },
       }}
     >
-      <PrivacyPolicyContent />
+      {/* <PrivacyPolicyContent /> */}
     </Container>
   );
 };
