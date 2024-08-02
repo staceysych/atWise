@@ -3,7 +3,6 @@ import HowItWorks from "./sections/HowItWorks";
 import Principles from "./sections/Principles";
 import Mentors from "./sections/Mentors";
 import ContactSection from "./sections/ContactSection";
-import Footer from "./components/Footer";
 
 import "./globals.css";
 import { Divider } from "@chakra-ui/react";
@@ -17,7 +16,6 @@ const Home = () => {
       <Principles />
       <Divider />
       <ContactSection />
-      <Footer />
     </main>
   );
 };

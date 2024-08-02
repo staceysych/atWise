@@ -12,10 +12,10 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Image from "next/image";
+import NextLink from "next/link";
 
 import { DesktopNav, MobileNav } from "./components";
 
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import Logo from "@/app/assets/logo.svg";
 import LogoWhite from "@/app/assets/logo2.svg";
 
@@ -83,16 +83,14 @@ export const Navbar = () => {
             justify={{ base: "center", md: "space-between" }}
             alignItems={"center"}
           >
-            <Box
-              width={"150px"}
-              onClick={(e) => scrollToTheElement(e, "about")}
-              cursor={"pointer"}
-            >
-              <Image
-                src={enableScrollStyles ? LogoWhite : Logo}
-                alt="AtWise Logo"
-                priority={true}
-              />
+            <Box width={"150px"} cursor={"pointer"}>
+              <NextLink href="/">
+                <Image
+                  src={enableScrollStyles ? LogoWhite : Logo}
+                  alt="AtWise Logo"
+                  priority={true}
+                />
+              </NextLink>
             </Box>
 
             <Flex display={{ base: "none", md: "flex" }} ml={10}>

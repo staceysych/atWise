@@ -14,8 +14,6 @@ const HeroSection = () => {
     locale: { hero },
   } = useLocale();
 
-  const splitText = hero.title.split("/n");
-
   return (
     <Container maxW={"7xl"}>
       <Stack

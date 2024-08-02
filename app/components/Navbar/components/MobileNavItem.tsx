@@ -1,23 +1,22 @@
 import { Box, Text } from "@chakra-ui/react";
-import { INavBarItem } from "../types";
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
+import { INavBarItem } from "@/app/components/Navbar/types";
+import NextLink from "next/link";
 
 const MobileNavItem = ({ label, id }: INavBarItem) => {
   return (
     <Box
       py={4}
-      onClick={(e: React.MouseEvent<HTMLDivElement>) =>
-        scrollToTheElement(e, id)
-      }
       justifyContent="space-between"
       alignItems="center"
       _hover={{
         textDecoration: "none",
       }}
     >
-      <Text fontWeight={600} color={"green.dark"}>
-        {label}
-      </Text>
+      <NextLink href={`/#${id}`}>
+        <Text fontWeight={600} color={"green.dark"}>
+          {label}
+        </Text>
+      </NextLink>
     </Box>
   );
 };

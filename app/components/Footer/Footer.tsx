@@ -1,20 +1,12 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Link,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Divider, Flex, Stack, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 import Image from "next/image";
 import { extractEmail } from "@/app/utils/extractEmail";
 
 import LogoWhite from "@/app/assets/logo2.svg";
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import { useLocale } from "@/app/providers";
 
 const Footer = () => {
@@ -39,16 +31,25 @@ const Footer = () => {
           }}
           justifyContent={{ base: "center", md: "space-between" }}
         >
-          <Box
-            width={"150px"}
-            onClick={(e) => scrollToTheElement(e, "about")}
-            cursor={"pointer"}
-          >
-            <Image src={LogoWhite} alt="AtWise Logo Footer" priority={true} />
+          <Box width={"150px"} cursor={"pointer"}>
+            <NextLink href="/">
+              <Image src={LogoWhite} alt="AtWise Logo Footer" priority={true} />
+            </NextLink>
           </Box>
           <Flex direction={"row"} gap={4} flex={1}>
             {links.map((link, index) => (
-              <Box key={index}>{link.title}</Box>
+              <NextLink key={index} href={link.href}>
+                <Text
+                  _hover={{
+                    textDecoration: "underline",
+                    textDecorationColor: "inherit",
+                    textDecorationThickness: "2px",
+                    textUnderlineOffset: "5px",
+                  }}
+                >
+                  {link.title}
+                </Text>
+              </NextLink>
             ))}
           </Flex>
           <Text display={{ base: "none", md: "block" }}>{rights}</Text>

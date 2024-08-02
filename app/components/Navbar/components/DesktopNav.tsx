@@ -1,8 +1,8 @@
 import { useLocale } from "@/app/providers";
 import { Box, Stack } from "@chakra-ui/react";
 import { getNavItems } from "../utils/getNavItems";
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import ContactButton from "@/app/components/ContactButton";
+import NextLink from "next/link";
 
 const DesktopNav = () => {
   const { locale } = useLocale();
@@ -14,9 +14,6 @@ const DesktopNav = () => {
           key={`${navItem.label}-${index}`}
           color={"inherit"}
           cursor={"pointer"}
-          onClick={(e: React.MouseEvent<HTMLDivElement>) =>
-            scrollToTheElement(e, navItem.id)
-          }
           _hover={{
             textDecoration: "underline",
             textDecorationColor: "inherit",
@@ -24,7 +21,9 @@ const DesktopNav = () => {
             textUnderlineOffset: "5px",
           }}
         >
-          {navItem.label?.toUpperCase()}
+          <NextLink href={`/#${navItem.id}`}>
+            {navItem.label?.toUpperCase()}
+          </NextLink>
         </Box>
       ))}
 

@@ -209,9 +209,21 @@
           "Tatiana is also an expert in advertising and marketing law. Tatiana was a head of Marketing and Advertising Legal Practice in *Ozon* (one of the leading marketplaces in Russia and CIS).",
           "Tatiana has extensive experience in *cloud and infrastructure services*. She was a leading counsel for the launch of an advertising data operator (ADO) to provide storage, recording, and transmission of advertising data.",
           "Through her work, she managed and assisted with connecting all *Yandex* group projects to international payment processing and acquiring services (Stripe, PayPal) in several foreign jurisdictions (USA, UIA, South America, Switzerland, etc.).",
-          "Tatiana's experience helps businesses identify risks, assess them, and mitigate them in the most beneficial way for the business. "
+          "Tatiana's experience helps businesses identify risks, assess them, and mitigate them in the most beneficial way for the business."
         ],
         "education": "KU Leuven, Belgium, Financial University under the Government of the RF, Russian State University for Humanities (RGGU)"
+      },
+      {
+        "id": "10",
+        "name": "Vladimir Bagaev",
+        "position": "Legal practice and IT project management",
+        "expertise": "Leadership in Digital Transformation | Entrepreneurship in Legal and IT Sectors | Online Platform Development | Legal Tech and Digitalisation",
+        "experience": [
+          "Vladimir has a rich background in both legal practice and IT project management. In 2008-2010, he worked at *KPMG* in Moscow, where, as a senior consultant, he advised clients on international transactions and the establishment of new ventures across various jurisdictions.",
+          "In 2010, Vladimir founded *Zakon.ru*, which has grown to become one of Russia's most popular legal websites and a central hub for the country's legal community. This platform showcases Vladimir's hands-on experience in building and managing a successful IT project. His expertise spans the legal, organisational, and technological aspects crucial for the development and operation of online platforms.",
+          "Currently serving as the *Development Director at Zakon Publishing*, Vladimir continues to influence the digital landscape of legal resources."
+        ],
+        "education": "University of Oxford, Saint Petersburg State University"
       }
     ],
     "incognito": {
@@ -263,7 +275,8 @@
   "footer": {
     "links": [
       {
-        "title": "Terms & Conditions"
+        "title": "Privacy Policy",
+        "href": "/privacy-policy"
       }
     ],
     "rights": "© 2024 @Wise",

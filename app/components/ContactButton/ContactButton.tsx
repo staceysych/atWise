@@ -1,6 +1,6 @@
-import { scrollToTheElement } from "@/app/utils/scrollToElement";
 import { Button } from "@chakra-ui/react";
 import { useLocale } from "@/app/providers";
+import NextLink from "next/link";
 
 const ContactButton = () => {
   const {
@@ -11,13 +11,12 @@ const ContactButton = () => {
   return (
     <Button
       width="fit-content"
-      padding={6}
+      padding={4}
       colorScheme={"orange"}
       bg={"orange.main"}
       _hover={{ bg: "orange.dark" }}
-      onClick={(e) => scrollToTheElement(e, link)}
     >
-      {title}
+      <NextLink href={`/#${link}`}>{title}</NextLink>
     </Button>
   );
 };

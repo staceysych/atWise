@@ -1,6 +1,6 @@
 import { useLocale } from "@/app/providers";
 import { Box, Stack, useColorModeValue } from "@chakra-ui/react";
-import { getNavItems } from "../utils/getNavItems";
+import { getNavItems } from "@/app/components/Navbar/utils/getNavItems";
 import MobileNavItem from "./MobileNavItem";
 import ContactButton from "@/app/components/ContactButton";
 
