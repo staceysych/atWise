@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import { useLocale } from "@/app/providers";
 import NextLink from "next/link";
+import { BASE_URL } from "@/app/utils/defaults";
 
 const ContactButton = () => {
   const {
@@ -16,7 +17,7 @@ const ContactButton = () => {
       bg={"orange.main"}
       _hover={{ bg: "orange.dark" }}
     >
-      <NextLink href={`/#${link}`}>{title}</NextLink>
+      <NextLink href={`${BASE_URL}#${link}`}>{title}</NextLink>
     </Button>
   );
 };
