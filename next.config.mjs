@@ -2,6 +2,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/atWise",
   output: "export",
   images: {
     unoptimized: true,
