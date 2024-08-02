@@ -15,5 +15,5 @@ yarn.lock
 
 # bundle
 /dist
-
+/out
 
