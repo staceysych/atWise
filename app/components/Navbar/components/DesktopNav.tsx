@@ -21,7 +21,7 @@ const DesktopNav = () => {
             textUnderlineOffset: "5px",
           }}
         >
-          <NextLink href={`/#${navItem.id}`}>
+          <NextLink href={`#${navItem.id}`}>
             {navItem.label?.toUpperCase()}
           </NextLink>
         </Box>

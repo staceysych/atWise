@@ -12,7 +12,7 @@ const MobileNavItem = ({ label, id }: INavBarItem) => {
         textDecoration: "none",
       }}
     >
-      <NextLink href={`/#${id}`}>
+      <NextLink href={`#${id}`}>
         <Text fontWeight={600} color={"green.dark"}>
           {label}
         </Text>
