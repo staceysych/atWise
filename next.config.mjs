@@ -1,8 +1,7 @@
-// import withMDX from "@next/mdx";
+import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/atWise",
   output: "export",
   images: {
     unoptimized: true,
@@ -10,4 +9,6 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
