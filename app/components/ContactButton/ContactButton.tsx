@@ -3,12 +3,19 @@ import { useLocale } from "@/app/providers";
 import NextLink from "next/link";
 // import { useRouter } from "next/router";
 
+import { useParams, usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
 const ContactButton = () => {
   const {
     locale: {
       contactButton: { link, title },
     },
   } = useLocale();
+
+  const pathname = usePathname();
+
+  console.log({ pathname });
   return (
     <Button
       width="fit-content"
