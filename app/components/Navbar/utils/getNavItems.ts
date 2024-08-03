@@ -2,19 +2,19 @@ export const getNavItems = (lang: any) => {
   return [
     {
       label: lang.nav.mission,
-      id: "about",
+      link: "/#about",
     },
     {
       label: lang.nav.howItWorks,
-      id: "howItWorks",
+      link: "/#howItWorks",
     },
     {
       label: lang.nav.mentors,
-      id: "mentors",
+      link: "/#mentors",
     },
     {
       label: lang.nav.principles,
-      id: "principles",
+      link: "/#principles",
     },
   ];
 };

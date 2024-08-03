@@ -287,6 +287,6 @@
   },
   "contactButton": {
     "title": "Contact Us",
-    "link": "contactUs"
+    "link": "/#contactUs"
   }
 }

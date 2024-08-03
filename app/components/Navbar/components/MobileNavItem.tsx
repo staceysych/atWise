@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { INavBarItem } from "@/app/components/Navbar/types";
 import NextLink from "next/link";
 
-const MobileNavItem = ({ label, id }: INavBarItem) => {
+const MobileNavItem = ({ label, link }: INavBarItem) => {
   return (
     <Box
       py={4}
@@ -12,7 +12,7 @@ const MobileNavItem = ({ label, id }: INavBarItem) => {
         textDecoration: "none",
       }}
     >
-      <NextLink href={`#${id}`}>
+      <NextLink href={`/${link}`}>
         <Text fontWeight={600} color={"green.dark"}>
           {label}
         </Text>

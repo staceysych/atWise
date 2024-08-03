@@ -1,4 +1,4 @@
 export interface INavBarItem {
   label: string;
-  id: string;
+  link: string;
 }
