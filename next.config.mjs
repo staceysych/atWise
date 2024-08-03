@@ -2,6 +2,8 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/atWise",
+  assetPrefix: "/atWise/",
   output: "export",
   images: {
     unoptimized: true,
