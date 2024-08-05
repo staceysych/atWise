@@ -21,10 +21,10 @@ const PrivacyPolicyPage = () => {
         h3: {
           fontSize: "lg",
           fontWeight: "semibold",
-          margin: "1rem 0 0.5rem",
+          margin: "2rem 0 0.5rem",
         },
         ul: {
-          marginLeft: "40px",
+          margin: "0 0 4px 40px",
         },
         a: {
           fontWeight: 600,
