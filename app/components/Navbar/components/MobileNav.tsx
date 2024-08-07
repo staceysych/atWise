@@ -4,7 +4,7 @@ import { getNavItems } from "@/app/components/Navbar/utils/getNavItems";
 import MobileNavItem from "./MobileNavItem";
 import ContactButton from "@/app/components/ContactButton";
 
-const MobileNav = () => {
+const MobileNav = ({ closeMenu }: { closeMenu: () => void }) => {
   const { locale } = useLocale();
 
   return (
@@ -16,11 +16,15 @@ const MobileNav = () => {
       justifyContent={"center"}
     >
       {getNavItems(locale).map((navItem, index) => (
-        <MobileNavItem key={`${navItem.label}-${index}`} {...navItem} />
+        <MobileNavItem
+          key={`${navItem.label}-${index}`}
+          {...navItem}
+          closeMenu={closeMenu}
+        />
       ))}
 
       <Box py={4}>
-        <ContactButton />
+        <ContactButton closeMenu={closeMenu} />
       </Box>
     </Stack>
   );

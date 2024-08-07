@@ -134,7 +134,7 @@
         "expertise": "IP Law | Commercial law | Acceleration programs | FinTech | Digital products development",
         "experience": [
           "Mariet is an expert specialising in IP and legal support of digital products.",
-          "Her main projects include *MTS StartUp Hub acceleration and partnerships program* (2020-2024), *UGC-platform NUUM* (2023-2024) applications store (2022-2024). Mariet has also acted as IP practice independent advisor at *Infralex* and as operations manager of a UK funded *NGO*.",
+          "Her main projects include *MTS StartUp Hub acceleration and partnerships program* (2020-2024), *UGC-platform NUUM* (2023-2024), applications store (2022-2024). Mariet has also acted as IP practice independent advisor at *Infralex* and as operations manager of a UK funded *NGO*.",
           "Her experience combines support of digital products for Retail companies *(IKEA, Magnit)* and *Telecom industry (MTS)*."
         ],
         "education": "University of Oxford, Kuban State University"
@@ -287,6 +287,6 @@
   },
   "contactButton": {
     "title": "Contact Us",
-    "link": "contactUs"
+    "link": "/#contactUs"
   }
 }
