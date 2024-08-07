@@ -84,7 +84,7 @@ export const Navbar = () => {
             alignItems={"center"}
           >
             <Box width={"150px"} cursor={"pointer"}>
-              <NextLink href="/">
+              <NextLink href="/" onClick={onClose}>
                 <Image
                   src={enableScrollStyles ? LogoWhite : Logo}
                   alt="AtWise Logo"
@@ -100,7 +100,7 @@ export const Navbar = () => {
         </Flex>
 
         <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
+          <MobileNav closeMenu={onClose} />
         </Collapse>
       </Container>
     </Box>

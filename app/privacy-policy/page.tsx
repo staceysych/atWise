@@ -1,6 +1,10 @@
 import { Container } from "@chakra-ui/react";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+};
 const PrivacyPolicyContent = dynamic(() => import("./privacy-policy.mdx"));
 
 const PrivacyPolicyPage = () => {
