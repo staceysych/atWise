@@ -1,5 +1,5 @@
 import { ChakraProvider, LocaleProvider } from "./providers";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import GoogleAnalytics from "./components/GoogleAnalytics";
