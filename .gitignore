@@ -17,3 +17,6 @@ yarn.lock
 /dist
 /out
 
+# env
+.env
+.env*.local
