@@ -41,7 +41,16 @@ const Mentor = ({ mentor }: MentorProps) => {
           justifyContent={"center"}
         >
           {imgSrc && (
-            <Image src={imgSrc} alt={mentor.name} priority={true} width={200} />
+            <Image
+              src={imgSrc}
+              alt={mentor.name}
+              priority={true}
+              width={200}
+              style={{
+                maxHeight: "216px",
+                objectFit: "contain",
+              }}
+            />
           )}
         </Box>
         <Stack

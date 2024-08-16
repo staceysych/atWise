@@ -236,6 +236,29 @@
           "In addition to her professional achievements, Tatiana contributes to the broader tech community by participating as a jury member for the *Aurora TechAward*. This role allows her to leverage her expertise to recognize and support women founders in innovative technology initiatives."
         ],
         "education": "North-Eastern Federal University, Stanford University Graduate School of Business"
+      },
+      {
+        "id": "12",
+        "name": "Roman Butenko",
+        "position": "Litigation and arbitration",
+        "expertise": "Litigation and arbitration | Ethics, compliance and investigations | Criminal law and procedure",
+        "experience": [
+          "Roman is *Counsel in Dispute Resolution Practice Group* [first launched as Baker McKenzie's Russian practice] of *Melling, Voitishkin and Partners* and has extensive global experience across various industries, including healthcare, TMT, energy, mining and others. Roman also has considerable experience of practicing law outside of Russia (Washington, DC; Almaty, Kazakhstan). Roman is a criminal attorney and specializes in the areas of anti-bribery compliance and investigations, criminal law, dispute resolution and arbitration. Roman is *Ph.D. in Private International Law* and is highly ranked by *Pravo-300, Global Investigations Review* and other research teams. Among Roman’s hobbies are soccer and chess.",
+          "Roman is also lecturing at the *National Research University Higher School of Economics and Russian Foreign Trade Academy*."
+        ],
+        "education": "Peoples’ Friendship University of Russia"
+      },
+      {
+        "id": "13",
+        "name": "Veronika Zelenkevich",
+        "position": "E-commerce and competition",
+        "expertise": "Competition | Sanctions | E-commerce | Contract Law | AdTech",
+        "experience": [
+          "Veronika is a *dual-qualified legal counsel* (Russia and England & Wales) with *9+ years of international legal experience* in competition and sanctions compliance, e-commerce, contract law, and AdTech.",
+          "Currently, Veronika provides global legal support regarding competition, sanctions, and white-collar crime compliance. Previously, she held senior legal positions at *Yandex* and *PepsiCo*. At Yandex, Veronika provided legal support for a wide range of businesses, including classified platforms, fintech, advertising, and travel services. At PepsiCo, Veronika supported sales, including export and import, and marketing activities in different regions.",
+          "Her experience combines the knowledge of the legal and business practices in *Russia* and the *UK*."
+        ],
+        "education": "Moscow State Institute of International Relations, King's College London"
       }
     ],
     "incognito": {
