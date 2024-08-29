@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Heading, Stack, Flex, Button } from "@chakra-ui/react";
 import Image from "next/image";
 
