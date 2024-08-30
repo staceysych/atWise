@@ -16,5 +16,9 @@ export const getNavItems = (lang: any) => {
       label: lang.nav.principles,
       link: "/#principles",
     },
+    {
+      label: lang.nav.blog,
+      link: "blog",
+    },
   ];
 };
