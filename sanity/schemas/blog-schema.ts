@@ -1,3 +1,5 @@
+import { Rule } from "@sanity/types";
+
 const blog = {
   name: "blog",
   title: "Blog",
@@ -7,17 +9,14 @@ const blog = {
       name: "title",
       title: "Title",
       type: "string",
+      validation: (Rule: Rule) =>
+        Rule.max(70).error("Title should be under 70 characters"),
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: { source: "title" },
-    },
-    {
-      name: "publishDate",
-      title: "Publish Date",
-      type: "datetime",
     },
     {
       name: "mainImage",
@@ -37,6 +36,8 @@ const blog = {
       title: "Excerpt",
       type: "text",
       description: "A short summary of the blog post",
+      validation: (Rule: Rule) =>
+        Rule.max(390).error("Title should be under 390 characters"),
     },
     {
       name: "content",
@@ -52,6 +53,8 @@ const blog = {
       options: {
         layout: "tags",
       },
+      validation: (Rule: Rule) =>
+        Rule.max(3).error("You can only add up to 3 tags"),
     },
   ],
 };

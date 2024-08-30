@@ -14,10 +14,13 @@ export const getBlogPosts = async (): Promise<Blog[]> => {
         _createdAt,
         title,
         "slug": slug.current,
-        publishDate,
-        "mainImage": mainImage.asset->url,
+        "image": {
+            "url": mainImage.asset->url,
+            "alt": mainImage.alt,
+            },
         excerpt,
-        content,   
+        content,
+        tags,   
     }`
   );
 };

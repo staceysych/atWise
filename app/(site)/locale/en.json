@@ -324,5 +324,8 @@
   "contactButton": {
     "title": "Contact Us",
     "link": "/#contactUs"
+  },
+  "blog": {
+    "continueReading": "Continue reading"
   }
 }
