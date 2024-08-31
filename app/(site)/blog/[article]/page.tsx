@@ -1,4 +1,3 @@
-"use client";
 import { getBlogArticle } from "@/sanity/sanity-utils";
 import {
   Container,
