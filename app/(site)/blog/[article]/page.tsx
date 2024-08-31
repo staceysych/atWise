@@ -1,3 +1,4 @@
+"use client";
 import { getBlogArticle } from "@/sanity/sanity-utils";
 import {
   Container,
@@ -7,7 +8,6 @@ import {
   Stack,
   Box,
   Text,
-  useTheme,
 } from "@chakra-ui/react";
 import React from "react";
 import { getFormattedDate } from "@/app/(site)/utils/common";
