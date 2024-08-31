@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
-export type Blog = {
+export type TBlog = {
   _id: string;
   _createdAt: Date;
   title: string;

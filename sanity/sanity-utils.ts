@@ -1,15 +1,12 @@
 import { createClient, groq } from "next-sanity";
-import { Blog } from "./types/Blog";
+import { TBlog } from "./types/Blog";
+import config from "./config/client-config";
 
-export const getBlogPosts = async (): Promise<Blog[]> => {
-  const client = createClient({
-    projectId: "5odeglfy",
-    dataset: "production",
-    apiVersion: "2021-03-25",
-  });
+export const getBlogPosts = async (): Promise<TBlog[]> => {
+  const client = createClient(config);
 
   return client.fetch(
-    groq`*[_type == "blog"]{
+    groq`*[_type == "blog"] | order(_createdAt desc) {
         _id,
         _createdAt,
         title,
@@ -22,5 +19,24 @@ export const getBlogPosts = async (): Promise<Blog[]> => {
         content,
         tags,   
     }`
+  );
+};
+
+export const getBlogArticle = async (slug: string): Promise<TBlog> => {
+  return createClient(config).fetch(
+    groq`*[_type == "blog" && slug.current == $slug][0]{
+      _id,
+        _createdAt,
+        title,
+        "slug": slug.current,
+        "image": {
+            "url": mainImage.asset->url,
+            "alt": mainImage.alt,
+            },
+        excerpt,
+        content,
+        tags,  
+    }`,
+    { slug }
   );
 };

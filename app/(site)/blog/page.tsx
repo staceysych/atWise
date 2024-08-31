@@ -1,8 +1,10 @@
-import { Container, Flex } from "@chakra-ui/react";
+import { Container, Divider, Grid } from "@chakra-ui/react";
 import type { Metadata } from "next";
-import BlogCard from "@/app/(site)/components/BlogCard";
+import BlogCard from "@/app/(site)/blog/components/BlogCard";
 
 import { getBlogPosts } from "@/sanity/sanity-utils";
+
+import LatestBlogSection from "@/app/(site)/blog/sections/LatestBlogSection";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -13,14 +15,21 @@ const BlogPage = async () => {
 
   console.log({ blogs });
 
+  const [latestBlogPost, ...rest] = blogs;
+
   return (
-    <Container maxW={"7xl"} py={{ base: "120px", lg: 40 }} height={"100vh"}>
-      Blog page
-      <Flex gap={6} justifyContent={"space-between"}>
-        {blogs.map((blog) => (
-          <BlogCard key={blog._id} {...blog} />
+    <Container maxW={"7xl"} py={{ base: "120px", lg: 40 }} minH={"100vh"}>
+      <LatestBlogSection blog={latestBlogPost} />
+      <Divider my={12} />
+      <Grid
+        gap={12}
+        gridTemplateColumns={"repeat(auto-fill, minmax(300px, 1fr))"}
+        rowGap={16}
+      >
+        {rest.map((blog) => (
+          <BlogCard key={blog._id} blog={blog} />
         ))}
-      </Flex>
+      </Grid>
     </Container>
   );
 };

@@ -4,6 +4,13 @@ import createMDX from "@next/mdx";
 const nextConfig = {
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+      },
+    ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
