@@ -20,9 +20,14 @@ const LatestBlogSection = ({ blog }: LatestBlogSectionProps) => {
   } = useLocale();
 
   return (
-    <Flex height={300} gap={10}>
+    <Flex
+      height={{ base: "100%", md: 300 }}
+      gap={10}
+      flexDirection={{ base: "column", md: "row" }}
+    >
       <Box
-        width={"50%"}
+        width={{ base: "100%", md: "50%" }}
+        height={300}
         position={"relative"}
         display={"flex"}
         alignItems={"center"}

@@ -13,23 +13,27 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
   const blogs = await getBlogPosts();
 
-  console.log({ blogs });
-
   const [latestBlogPost, ...rest] = blogs;
+
+  const showMoreBlogs = blogs.length > 1;
 
   return (
     <Container maxW={"7xl"} py={{ base: "120px", lg: 40 }} minH={"100vh"}>
       <LatestBlogSection blog={latestBlogPost} />
-      <Divider my={12} />
-      <Grid
-        gap={12}
-        gridTemplateColumns={"repeat(auto-fill, minmax(300px, 1fr))"}
-        rowGap={16}
-      >
-        {rest.map((blog) => (
-          <BlogCard key={blog._id} blog={blog} />
-        ))}
-      </Grid>
+      {showMoreBlogs && (
+        <>
+          <Divider my={12} />
+          <Grid
+            gap={12}
+            gridTemplateColumns={"repeat(auto-fill, minmax(300px, 1fr))"}
+            rowGap={16}
+          >
+            {rest.map((blog) => (
+              <BlogCard key={blog._id} blog={blog} />
+            ))}
+          </Grid>
+        </>
+      )}
     </Container>
   );
 };

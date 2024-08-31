@@ -18,7 +18,7 @@ export const getNavItems = (lang: any) => {
     },
     {
       label: lang.nav.blog,
-      link: "blog",
+      link: "/blog",
     },
   ];
 };

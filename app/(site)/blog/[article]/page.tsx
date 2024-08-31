@@ -27,7 +27,6 @@ const Article = async ({ params }: ArticleProps) => {
 
   const formattedDate = getFormattedDate(_createdAt);
 
-  console.log({ article });
   return (
     <Container
       maxW={"7xl"}
