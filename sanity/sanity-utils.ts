@@ -1,6 +1,7 @@
 import { createClient, groq, type QueryParams } from "next-sanity";
 import { TBlog } from "./types/Blog";
 import config from "./config/client-config";
+import { TMentor } from "./types/Mentor";
 
 export const sanityFetch = async <QueryResponse>({
   query,
@@ -59,4 +60,23 @@ export const getBlogArticle = async (slug: string): Promise<TBlog> => {
     tags: ["blog"],
     qParams: { slug },
   });
+};
+
+export const getMentors = async (): Promise<TMentor[]> => {
+  const client = createClient(config);
+
+  return client.fetch(
+    groq`*[_type == "mentors"] {
+        _id,
+        name,
+        "image": {
+            "url": image.asset->url,
+            "alt": image.alt,
+            },
+        position,
+        expertise,
+        experience,
+        education,   
+    }`
+  );
 };
