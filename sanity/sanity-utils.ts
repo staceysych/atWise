@@ -18,7 +18,13 @@ export const getBlogPosts = async (): Promise<TBlog[]> => {
         excerpt,
         content,
         tags,   
-    }`
+    }`,
+    {},
+    {
+      next: {
+        revalidate: 10,
+      },
+    }
   );
 };
 
@@ -37,6 +43,11 @@ export const getBlogArticle = async (slug: string): Promise<TBlog> => {
         content,
         tags,  
     }`,
-    { slug }
+    { slug },
+    {
+      next: {
+        revalidate: 10,
+      },
+    }
   );
 };
