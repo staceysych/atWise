@@ -1,12 +1,25 @@
-import { createClient, groq } from "next-sanity";
+import { createClient, groq, type QueryParams } from "next-sanity";
 import { TBlog } from "./types/Blog";
 import config from "./config/client-config";
 
-export const getBlogPosts = async (): Promise<TBlog[]> => {
+export const sanityFetch = async <QueryResponse>({
+  query,
+  qParams = {},
+  tags,
+}: {
+  query: string;
+  qParams?: QueryParams;
+  tags: string[];
+}): Promise<QueryResponse> => {
   const client = createClient(config);
 
-  return client.fetch(
-    groq`*[_type == "blog"] | order(_createdAt desc) {
+  return client.fetch<QueryResponse>(query, qParams, {
+    next: { tags },
+  });
+};
+
+export const getBlogPosts = async (): Promise<TBlog[]> => {
+  const blogs = groq`*[_type == "blog"] | order(_createdAt desc) {
         _id,
         _createdAt,
         title,
@@ -18,19 +31,16 @@ export const getBlogPosts = async (): Promise<TBlog[]> => {
         excerpt,
         content,
         tags,   
-    }`,
-    {},
-    {
-      next: {
-        revalidate: 10,
-      },
-    }
-  );
+    }`;
+
+  return sanityFetch({
+    query: blogs,
+    tags: ["blog"],
+  });
 };
 
 export const getBlogArticle = async (slug: string): Promise<TBlog> => {
-  return createClient(config).fetch(
-    groq`*[_type == "blog" && slug.current == $slug][0]{
+  const blog = groq`*[_type == "blog" && slug.current == $slug][0]{
       _id,
         _createdAt,
         title,
@@ -42,12 +52,11 @@ export const getBlogArticle = async (slug: string): Promise<TBlog> => {
         excerpt,
         content,
         tags,  
-    }`,
-    { slug },
-    {
-      next: {
-        revalidate: 10,
-      },
-    }
-  );
+    }`;
+
+  return sanityFetch({
+    query: blog,
+    tags: ["blog"],
+    qParams: { slug },
+  });
 };
