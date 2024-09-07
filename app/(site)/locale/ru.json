@@ -260,6 +260,18 @@
           "Her experience combines the knowledge of the legal and business practices in *Russia* and the *UK*."
         ],
         "education": "Moscow State Institute of International Relations, King's College London"
+      },
+      {
+        "id": "14",
+        "name": "Elvina Heiland",
+        "position": "Legal tech and project management",
+        "expertise": "Legal Tech | Project Management | Contract Lifecycle Management | Digital Transformation | Data Protection | IP Law",
+        "experience": [
+          "Elvina is a skilled Legal Tech Manager and qualified Legal Counsel with *10+ years of experience* across Germany, CIS, and the UK. She has extensive expertise in managing cross-functional teams, implementing digital and LegalTech solutions, and driving digital transformation initiatives and experience working at major global companies such as adidas *HQ*, *Yandex*, *the Walt Disney Company* and *Clifford Chance*.",
+          "Elvina excels in deploying innovative legal technology solutions, streamlining administrative workflows, and enhancing operational efficiencies. Her skills include automating document workflows, improving user engagement through targeted training programs, and integrating AI tools to optimize legal processes.",
+          "In addition to her corporate achievements, Elvina is a researcher and columnist at *Legal Technologist* and on *LinkedIn*, where she shares insights on the evolving intersection of law and technology."
+        ],
+        "education": "ESCP Business School, Kutafin Moscow State Law University"
       }
     ],
     "incognito": {

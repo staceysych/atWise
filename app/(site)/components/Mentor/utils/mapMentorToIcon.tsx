@@ -13,6 +13,7 @@ import Mentor10 from "@/app/(site)/assets/Mentor10.png";
 import Mentor11 from "@/app/(site)/assets/Mentor11.png";
 import Mentor12 from "@/app/(site)/assets/Mentor12.png";
 import Mentor13 from "@/app/(site)/assets/Mentor13.png";
+import Mentor14 from "@/app/(site)/assets/Mentor14.png";
 
 const mentors: StaticImageData[] = [
   Mentor1,
@@ -28,6 +29,7 @@ const mentors: StaticImageData[] = [
   Mentor11,
   Mentor12,
   Mentor13,
+  Mentor14,
 ];
 
 export const mapMentorToIcon = (id: string): StaticImageData => {
