@@ -11,21 +11,27 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { IMentor } from "../Mentor/types";
 import Image from "next/image";
-import { mapMentorToIcon } from "../Mentor/utils/mapMentorToIcon";
+import { TMentor } from "@/sanity/types/Mentor";
 
 import { useLocale } from "@/app/(site)/providers";
-import { highlightText } from "@/app/(site)/utils/highlightText";
+
+import { PortableText } from "@portabletext/react";
 
 interface DialogProps {
   isOpen: boolean;
   onClose: () => void;
-  mentor: IMentor;
+  mentor: TMentor;
 }
 
 const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
-  const imgSrc = mapMentorToIcon(mentor.id);
+  const {
+    name,
+    expertise,
+    experience,
+    education,
+    image: { url, alt },
+  } = mentor;
   const { locale } = useLocale();
 
   return (
@@ -36,53 +42,60 @@ const MentorDialog = ({ isOpen, onClose, mentor }: DialogProps) => {
         <ModalBody padding={{ base: 6, lg: 8 }}>
           <Stack>
             <Flex width={"100%"} gap={8}>
-              <Stack width={"100%"} gap={2} color={"green.dark"}>
+              <Stack flex={1} gap={2} color={"green.dark"}>
                 <Heading
                   fontWeight={600}
                   fontSize={"3xl"}
                   textAlign={"left"}
                   marginBottom={2}
                 >
-                  {mentor.name}
+                  {name}
                 </Heading>
                 <Divider />
                 <Heading fontSize={"xl"}>
                   {locale.mentors.fieldOfExpertise}
                 </Heading>
-                <Text>{mentor.expertise}</Text>
+                <Text>{expertise}</Text>
                 <Divider />
                 <Heading fontSize={"xl"}>{locale.mentors.experience}</Heading>
-                <Stack>
-                  {mentor.experience?.map((exp, index) => (
-                    <Text key={index}>
-                      {highlightText({
-                        text: exp,
-                        color: "orange.main",
-                        fontWeight: 600,
-                      })}
-                    </Text>
-                  ))}
+                <Stack
+                  css={{
+                    strong: {
+                      color: "#FA8D62",
+                    },
+                  }}
+                >
+                  <PortableText value={experience} />
                 </Stack>
                 <Divider display={{ base: "block", lg: "none" }} />
                 <Box display={{ base: "block", lg: "none" }}>
                   <Heading fontSize={"xl"} marginBottom={2}>
                     {locale.mentors.education}
                   </Heading>
-                  <Text>{mentor.education}</Text>
+                  <Text>{education}</Text>
                 </Box>
               </Stack>
               <Box
                 width={"200px"}
                 color={"green.dark"}
-                display={{ base: "none", lg: "block" }}
+                display={{ base: "none", lg: "flex" }}
+                flexDir={"column"}
               >
-                {imgSrc && (
-                  <Image src={imgSrc} alt={mentor.name} priority={true} />
-                )}
+                <Image
+                  width={200}
+                  height={205}
+                  src={url}
+                  alt={alt}
+                  priority={true}
+                  style={{
+                    maxHeight: "205px",
+                    objectFit: "contain",
+                  }}
+                />
                 <Heading fontSize={"14px"} my={3}>
                   {locale.mentors.education}
                 </Heading>
-                <Text fontSize={"12px"}>{mentor.education}</Text>
+                <Text fontSize={"12px"}>{education}</Text>
               </Box>
             </Flex>
           </Stack>

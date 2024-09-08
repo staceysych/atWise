@@ -1,15 +1,10 @@
-"use client";
-
 import { Box, Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
-import { useLocale } from "@/app/(site)/providers";
-
 import Mentor from "@/app/(site)/components/Mentor";
+import { getMentors } from "@/sanity/sanity-utils";
 
-const Mentors = () => {
-  const {
-    locale: { mentors },
-  } = useLocale();
+const Mentors = async () => {
+  const mentorsData = await getMentors();
 
   return (
     <Box bg={"green.dark2"} id="mentors">
@@ -27,9 +22,13 @@ const Mentors = () => {
               color={"white"}
               textAlign={"left"}
             >
-              {mentors.title.toUpperCase()}
+              Our mentors
             </Heading>
-            <Text color={"white"}>{mentors.body}</Text>
+            <Text color={"white"}>
+              Meet our mentors! Our mentors are industry leaders, seasoned legal
+              practitioners, and professionals who are passionate about sharing
+              their knowledge and helping you succeed.
+            </Text>
           </Stack>
           <Flex
             gap={14}
@@ -39,7 +38,7 @@ const Mentors = () => {
             justifyContent={"center"}
             maxWidth={"900px"}
           >
-            {mentors.mentors.map((mentor, index) => (
+            {mentorsData.map((mentor, index) => (
               <Mentor key={index} mentor={mentor} />
             ))}
           </Flex>

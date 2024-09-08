@@ -1,5 +1,6 @@
 import blog from "./blog-schema";
+import mentor from "./mentor-schema";
 
-const schemas = [blog];
+const schemas = [blog, mentor];
 
 export default schemas;
