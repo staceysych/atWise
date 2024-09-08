@@ -79,7 +79,7 @@ const Mentor = ({ mentor }: MentorProps) => {
           </Button>
         </Stack>
       </Stack>
-      {/* <MentorDialog isOpen={isOpen} onClose={onClose} mentor={mentor} /> */}
+      <MentorDialog isOpen={isOpen} onClose={onClose} mentor={mentor} />
     </>
   );
 };

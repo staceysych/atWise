@@ -28,15 +28,15 @@ const blog = {
     {
       name: "position",
       title: "Position",
-      type: "text",
+      type: "string",
       description: "A short summary of the mentor's skills",
       validation: (Rule: Rule) =>
-        Rule.required().max(45).error("Position should be under 45 characters"),
+        Rule.required().max(54).error("Position should be under 54 characters"),
     },
     {
       name: "expertise",
-      title: "expertise",
-      type: "text",
+      title: "Expertise",
+      type: "string",
       validation: (Rule: Rule) =>
         Rule.required().error("Expertise is required"),
     },
@@ -51,7 +51,7 @@ const blog = {
     {
       name: "education",
       title: "Education",
-      type: "text",
+      type: "string",
       validation: (Rule: Rule) =>
         Rule.required().error("Education is required"),
     },

@@ -63,10 +63,7 @@ export const getBlogArticle = async (slug: string): Promise<TBlog> => {
 };
 
 export const getMentors = async (): Promise<TMentor[]> => {
-  const client = createClient(config);
-
-  return client.fetch(
-    groq`*[_type == "mentors"] {
+  const mentorsQuery = groq`*[_type == "mentors"] | order(_createdAt asc) {
         _id,
         name,
         "image": {
@@ -77,6 +74,10 @@ export const getMentors = async (): Promise<TMentor[]> => {
         expertise,
         experience,
         education,   
-    }`
-  );
+    }`;
+
+  return sanityFetch({
+    query: mentorsQuery,
+    tags: ["mentors"],
+  });
 };

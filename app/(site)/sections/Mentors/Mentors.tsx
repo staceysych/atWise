@@ -6,8 +6,6 @@ import { getMentors } from "@/sanity/sanity-utils";
 const Mentors = async () => {
   const mentorsData = await getMentors();
 
-  console.log({ mentorsData });
-
   return (
     <Box bg={"green.dark2"} id="mentors">
       <Container maxW={"7xl"}>
@@ -24,9 +22,13 @@ const Mentors = async () => {
               color={"white"}
               textAlign={"left"}
             >
-              {/* {mentors.title.toUpperCase()} */}
+              Our mentors
             </Heading>
-            {/* <Text color={"white"}>{mentors.body}</Text> */}
+            <Text color={"white"}>
+              Meet our mentors! Our mentors are industry leaders, seasoned legal
+              practitioners, and professionals who are passionate about sharing
+              their knowledge and helping you succeed.
+            </Text>
           </Stack>
           <Flex
             gap={14}
