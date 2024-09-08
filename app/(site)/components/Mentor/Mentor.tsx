@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -8,21 +10,20 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { mapMentorToIcon } from "./utils/mapMentorToIcon";
-
-import { useLocale } from "@/app/(site)/providers";
-import { IMentor } from "./types";
 import MentorDialog from "@/app/(site)/components/MentorDialog";
+import { TMentor } from "@/sanity/types/Mentor";
 
 interface MentorProps {
-  mentor: IMentor;
+  mentor: TMentor;
 }
 
 const Mentor = ({ mentor }: MentorProps) => {
-  const { locale } = useLocale();
+  const {
+    name,
+    image: { url, alt },
+    position,
+  } = mentor;
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const imgSrc = mapMentorToIcon(mentor.id);
 
   return (
     <>
@@ -38,18 +39,17 @@ const Mentor = ({ mentor }: MentorProps) => {
           alignItems={"flex-end"}
           justifyContent={"center"}
         >
-          {imgSrc && (
-            <Image
-              src={imgSrc}
-              alt={mentor.name}
-              priority={true}
-              width={200}
-              style={{
-                maxHeight: "216px",
-                objectFit: "contain",
-              }}
-            />
-          )}
+          <Image
+            src={url}
+            alt={alt}
+            priority={true}
+            height={216}
+            width={200}
+            style={{
+              maxHeight: "216px",
+              objectFit: "contain",
+            }}
+          />
         </Box>
         <Stack
           shadow="md"
@@ -59,10 +59,10 @@ const Mentor = ({ mentor }: MentorProps) => {
           padding={3}
         >
           <Heading fontWeight={600} fontSize={"xl"} color={"green.dark"}>
-            {mentor.name}
+            {name}
           </Heading>
           <Text fontSize={14} color={"green.dark"} height={"40px"}>
-            {mentor.position}
+            {position}
           </Text>
           <Button
             variant={"text"}
@@ -75,7 +75,7 @@ const Mentor = ({ mentor }: MentorProps) => {
             onClick={onOpen}
             borderBottom={"16px"}
           >
-            {locale.mentors.findOutMore}
+            Find out more
           </Button>
         </Stack>
       </Stack>
